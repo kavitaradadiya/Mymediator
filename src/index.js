@@ -4,10 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter as Router } from 'react-router-dom';
+
+// remixicon-link
+import 'remixicon/fonts/remixicon.css'
+
+// Slick-crousel
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Router>
     <App />
+    </Router>
   </React.StrictMode>
 );
 
