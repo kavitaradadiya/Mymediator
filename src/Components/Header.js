@@ -232,8 +232,17 @@ export default function Header() {
                         </nav>
                     </div>
                     <div className='col-lg-4 col-md-4 col-sm-4 col-4'>
-                        
-                        <button className='header_btn4'>  <i className="ri-map-pin-line text-danger pe-2"></i>Chennai, Tamil Nadu</button>
+
+                        <div className='select-wrapper'>
+                            <i className="ri-map-pin-line text-danger location-icon"></i>
+                            <select className='header_btn4'>
+                                <option value="volvo" hidden>Chennai, Tamil Nadu</option>
+                                <option value="saab">Mumbai, Maharashtra</option>
+                                <option value="opel">Kolkata, West Bengal</option>
+                                <option value="opel">Pune, Maharashtra</option>
+                                <option value="opel">Hyderabad, Telangana</option>
+                            </select>
+                        </div>          
                     </div>
                 </div>
             </section>
