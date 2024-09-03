@@ -8,22 +8,49 @@ export default function Property() {
     const [selectedOption, setSelectedOption] = useState(null);
     const [category] = useState("PROPERTY")
     const [allProduct, setAllProduct] = useState(products)
+    const [filteredProduct, setFilteredProduct] = useState([]);
+    const [priceRange, setPriceRange] = useState(null);
+    const [selectedFurnishing, setSelectedFurnishing] = useState(null);
+    const [selectedBedroom, setSelectedBedroom] = useState(null);
+
 
     const handleOptionClick = (option) => {
         setSelectedOption(option);
     }
-    useEffect (() => {
-        if(category === "PROPERTY"){
-            const FilterProduct = products.filter(item => item.category === "Property")
-                console.log(FilterProduct);
-                setAllProduct(FilterProduct)
-          }
-    },[category])
+
+    const handlePriceFilter = (range) => {
+        setPriceRange(range);
+    }
+
+    const handleFurnishingClick = (furnishing) => {
+        setSelectedFurnishing(furnishing);
+    }
+
+    const handleBedroomClick = (bedroom) => {
+        setSelectedBedroom(bedroom);
+    };
+
+    useEffect(() => {
+        let FilterProduct = products.filter(item => item.category === "Property");
+
+        // Apply price filter if a price range is selected
+        if (priceRange) {
+            FilterProduct = FilterProduct.filter(item => {
+                if (priceRange === "Below 1 Lac") return item.price < 100000;
+                if (priceRange === "1 Lac - 2 Lac") return item.price >= 100000 && item.price <= 200000;
+                if (priceRange === "2 Lac - 3 Lac") return item.price >= 200000 && item.price <= 300000;
+                if (priceRange === "3 Lac - 5 Lac") return item.price >= 300000 && item.price <= 500000;
+                if (priceRange === "5 Lac And Above") return item.price > 500000;
+                return true;
+            });
+        }
+        setFilteredProduct(FilterProduct);
+    }, [category, priceRange]);
     return (
         <div style={{ backgroundColor: "#F6F6F6" }}>
-           <div>
-            <CommonSection title="Property List"></CommonSection>
-           </div>
+            <div>
+                <CommonSection title="Property List"></CommonSection>
+            </div>
             <section className='mt-3'>
                 <Carousel></Carousel>
             </section>
@@ -34,7 +61,7 @@ export default function Property() {
                     <div className='col-lg-4 col-md-4 col-sm-6 property_box'>
                         <div className='electronic fix_height'>
                             <div className='justify-content-between d-flex mt-3'>
-                                <h4 data-bs-toggle="collapse" href="#collapseExample"  aria-controls="collapseExample">Categories </h4>
+                                <h4 data-bs-toggle="collapse" href="#collapseExample" aria-controls="collapseExample">Categories </h4>
                                 <i className="ri-arrow-down-s-line mt-2" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
                             </div>
                             <div class="collapse" id="collapseExample">
@@ -77,23 +104,6 @@ export default function Property() {
                         </div>
                         <hr></hr>
                         <div className='electronic'>
-                            <div className='justify-content-between d-flex'>
-                                <h4 data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">Location</h4>
-                                <i className="ri-arrow-down-s-line mt-2" data-bs-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample"></i>
-                            </div>
-                            <div class="collapse" id="collapseExample1">
-                                <div class="card card-body">
-                                    <select className='select_border'>
-                                        <option>Chennai , Tamil Nadu</option>
-                                        <option>Mumbai, Maharashtra</option>
-                                        <option>Ambattur</option>
-                                        <option>Central Station</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <hr></hr>
-                        <div className='electronic'>
                             <h4>Filter</h4>
                             <div className='justify-content-between d-flex'>
                                 <h4 data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">Price</h4>
@@ -101,14 +111,41 @@ export default function Property() {
                             </div>
                             <div class="collapse" id="collapseExample5">
                                 <div class="card card-body">
-                                    <button className='property_btn'>Below 1 Lac</button>
-                                    <button className='property_btn mt-3'>1 Lac - 2 Lac</button>
-                                    <button className='property_btn mt-3'>2 Lac - 3 Lac</button>
-                                    <button className='property_btn mt-3'>3 Lac - 5 Lac</button>
-                                    <button className='property_btn mt-3'>5 Lac And Above</button>
+                                    <button
+                                        className={`property_btn ${priceRange === "Below 1 Lac" ? 'selected' : ''}`}
+                                        onClick={() => handlePriceFilter("Below 1 Lac")}
+                                    >
+                                        Below 1 Lac
+                                    </button>
+                                    <button
+                                        className={`property_btn mt-3 ${priceRange === "1 Lac - 2 Lac" ? 'selected' : ''}`}
+                                        onClick={() => handlePriceFilter("1 Lac - 2 Lac")}
+                                    >
+                                        1 Lac - 2 Lac
+                                    </button>
+                                    <button
+                                        className={`property_btn mt-3 ${priceRange === "2 Lac - 3 Lac" ? 'selected' : ''}`}
+                                        onClick={() => handlePriceFilter("2 Lac - 3 Lac")}
+                                    >
+                                        2 Lac - 3 Lac
+                                    </button>
+                                    <button
+                                        className={`property_btn mt-3 ${priceRange === "3 Lac - 5 Lac" ? 'selected' : ''}`}
+                                        onClick={() => handlePriceFilter("3 Lac - 5 Lac")}
+                                    >
+                                        3 Lac - 5 Lac
+                                    </button>
+                                    <button
+                                        className={`property_btn mt-3 ${priceRange === "5 Lac And Above" ? 'selected' : ''}`}
+                                        onClick={() => handlePriceFilter("5 Lac And Above")}
+                                    >
+                                        5 Lac And Above
+                                    </button>
                                 </div>
                             </div>
                         </div>
+
+
                         <hr></hr>
                         <div className='electronic'>
                             <h4>Type</h4>
@@ -140,20 +177,56 @@ export default function Property() {
                         <hr></hr>
                         <div className='electronic'>
                             <h4>Bedrooms</h4>
-                            <button className='property_btn'>1+ Bedrooms</button>
-                            <button className='property_btn mt-3'>2+ Bedrooms</button>
-                            <button className='property_btn mt-3'>3+ Bedrooms</button>
-                            <button className='property_btn mt-3'>4+ Bedrooms</button>
+                            <button
+                                className={`property_btn ${selectedBedroom === "1+ Bedrooms" ? 'selected' : ''}`}
+                                onClick={() => handleBedroomClick("1+ Bedrooms")}
+                            >
+                                1+ Bedrooms
+                            </button>
+                            <button
+                                className={`property_btn mt-3 ${selectedBedroom === "2+ Bedrooms" ? 'selected' : ''}`}
+                                onClick={() => handleBedroomClick("2+ Bedrooms")}
+                            >
+                                2+ Bedrooms
+                            </button>
+                            <button
+                                className={`property_btn mt-3 ${selectedBedroom === "3+ Bedrooms" ? 'selected' : ''}`}
+                                onClick={() => handleBedroomClick("3+ Bedrooms")}
+                            >
+                                3+ Bedrooms
+                            </button>
+                            <button
+                                className={`property_btn mt-3 ${selectedBedroom === "4+ Bedrooms" ? 'selected' : ''}`}
+                                onClick={() => handleBedroomClick("4+ Bedrooms")}
+                            >
+                                4+ Bedrooms
+                            </button>
                         </div>
+
                         <hr></hr>
                         <div className='electronic'>
                             <div className='justify-content-between d-flex'>
                                 <h4>Furnishing</h4>
                                 <i className="ri-arrow-down-s-line mt-2"></i>
                             </div>
-                            <button className='property_btn'>Furnishing</button>
-                            <button className='property_btn mt-3'>Unfurnishing</button>
-                            <button className='property_btn mt-3'>Semi-Furnishing</button>
+                            <button
+                                className={`property_btn ${selectedFurnishing === "Furnished" ? 'selected' : ''}`}
+                                onClick={() => handleFurnishingClick("Furnished")}
+                            >
+                                Furnished
+                            </button>
+                            <button
+                                className={`property_btn mt-3 ${selectedFurnishing === "Semi-Furnished" ? 'selected' : ''}`}
+                                onClick={() => handleFurnishingClick("Semi-Furnished")}
+                            >
+                                Semi-Furnished
+                            </button>
+                            <button
+                                className={`property_btn mt-3 ${selectedFurnishing === "Unfurnished" ? 'selected' : ''}`}
+                                onClick={() => handleFurnishingClick("Unfurnished")}
+                            >
+                                Unfurnished
+                            </button>
                         </div>
                         <hr></hr>
                         <div className='electronic'>
@@ -245,7 +318,7 @@ export default function Property() {
                     <div className='col-lg-8 col-md-8 col-sm-6'>
                         <div className='row'>
                             {
-                                allProduct.map((item) => {
+                                filteredProduct.map((item) => {
                                     return (
                                         <div className='col-lg-4 col-md-6 col-sm-6 col-6 mb-4' key={item.id}>
                                             <ProductCard items={item}></ProductCard>

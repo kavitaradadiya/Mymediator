@@ -298,7 +298,7 @@ const products = [
     {
      id: "30",
      title: "Dinesh house ",
-     price:690000  ,
+     price:300000  ,
      image01: product_02_image_01,
      location:"West Mambalam, ",
      detail :"# 800 Sq . Ft",
@@ -362,7 +362,7 @@ const products = [
      {
       id: "37",
       title: "Kali house ",
-      price: 4500000,
+      price: 400000,
       image01: product_09_image_01,
       location:"West Mambalam, Chennai",
       detail :"# 800 Sq . Ft",
@@ -389,7 +389,7 @@ const products = [
      {
       id: "40",
       title: "Selva house ",
-      price:990000 ,
+      price:500000 ,
       image01: product_12_image_01,
       location:"West Mambalam, Chennai",
       detail :"# 800 Sq . Ft",
@@ -443,7 +443,7 @@ const products = [
      {
       id: "46",
       title: "Kaviya house ",
-      price:990000,
+      price:350000,
       image01: product_18_image_01,
       location:"West Mambalam, Chennai",
       detail :"# 800 Sq . Ft",
@@ -506,7 +506,7 @@ const products = [
      {
       id: "53",
       title: "RKM house ",
-      price:990000,
+      price:200000,
       image01: product_25_image_01,
       location:"West Mambalam, Chennai",
       detail :"# 800 Sq . Ft",
