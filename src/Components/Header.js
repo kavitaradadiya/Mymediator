@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import bell from '../img/bell1.png'
+import logo from '../img/logo.png'
 
 export default function Header() {
     return (
@@ -25,7 +27,7 @@ export default function Header() {
                                 </div>
                                 <div className='col-lg-1 col-md-1 col-sm-0 col-sm-1 d-lg-block d-md-block d-sm-none d-none'>
                                     <div className='position-relative'>
-                                        <img src='assets/img/bell1.png' className='img-fluid ' width="50%" alt=''></img>
+                                        <img src={bell} className='img-fluid ' width="50%" alt=''></img>
                                         <span className="position-absolute translate-middle badge rounded-pill badge-set">.</span>
                                     </div>
 
@@ -33,7 +35,7 @@ export default function Header() {
                                 <div className='col-lg-2 col-md-3 col-sm-3'>
                                     <button className='btn header_btn' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login/Sign up</button>
                                     {/* <!-- Modal --> */}
-                                    <div className="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
+                                    <div className="modal fade" id="staticBackdrop" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
                                         <div className="modal-dialog">
                                             <div className="modal-content">
                                                 <div className="modal-body ">
@@ -53,10 +55,10 @@ export default function Header() {
                                                             <div className='mt-2'>
                                                                 <p className='model_p1'>Didn't have an account ? <span className='text-dark fw-bold' data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</span></p>
 
-                                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
-                                                                    <div class="modal-dialog">
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-body">
+                                                                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
+                                                                    <div className="modal-dialog">
+                                                                        <div className="modal-content">
+                                                                            <div className="modal-body">
                                                                                 <div className='row'>
                                                                                     <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
                                                                                         <h5 className="modal-title text-center fw-bold" id="staticBackdropLabel">Sign Up</h5>
@@ -73,10 +75,10 @@ export default function Header() {
                                                                                             <button className='model_btn' data-bs-toggle="modal" data-bs-target="#kavita">Sign Up</button>
 
                                                                                             {/* <!-- Modal --> */}
-                                                                                            <div class="modal fade" id="kavita" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                                                                <div class="modal-dialog">
-                                                                                                    <div class="modal-content">
-                                                                                                        <div class="modal-body">
+                                                                                            <div className="modal fade" id="kavita" data-bs-backdrop="true" data-bs-keyboard="true" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                                                                <div className="modal-dialog">
+                                                                                                    <div className="modal-content">
+                                                                                                        <div className="modal-body">
                                                                                                             <div className='row'>
                                                                                                                 <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
                                                                                                                     <div className='mt-4'>
@@ -152,16 +154,16 @@ export default function Header() {
             <section className='container'>
                 <div className='row'>
                     <div className='col-lg-1 col-md-1 d-lg-block d-md-none d-sm-none d-none'>
-                        <img src='assets/img/logo.png' alt='' className='img-fluid position-absolute header_img' width="9%"></img>
+                       <Link to='/'> <img src={logo} alt='' className='img-fluid position-absolute header_img' width="9%"></img></Link>
                     </div>
                     <div className='col-lg-8 col-md-0 col-sm-0 col-0 d-lg-block d-md-none d-sm-none d-none'>
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <div class="container-fluid">
-                                <div class="collapse navbar-collapse" id="navbarNav">
-                                    <ul class="navbar-nav">
+                        <nav className="navbar navbar-expand-lg navbar-light">
+                            <div className="container-fluid">
+                                <div className="collapse navbar-collapse" id="navbarNav">
+                                    <ul className="navbar-nav">
                                         <div className='nav-item dropdown'>
-                                            <Link className="dropbtn nav-link" to="/" >All Category<i class="ri-arrow-down-s-line ps-1 pt-5"></i></Link>
-                                            <ul class="dropdown-menu dropdown-content border border-0" aria-labelledby="dropdownMenuLink">
+                                            <Link className="dropbtn nav-link" to="/" >All Category<i className="ri-arrow-down-s-line ps-1 pt-5"></i></Link>
+                                            <ul className="dropdown-menu dropdown-content border border-0" aria-labelledby="dropdownMenuLink">
                                                 <div className='row'>
                                                     <div className='col-lg-4 col-md-4 col-sm-6'>
                                                         <h6 style={{ fontSize: "14px", paddingTop: "10px", paddingLeft: "20px", fontWeight: "600" }}>Property</h6>
@@ -204,16 +206,16 @@ export default function Header() {
                                                 </div>
                                             </ul>
                                         </div>
-                                        <li class="nav-item">
+                                        <li className="nav-item">
                                             <Link className="nav-link text-dark" >Electronics</Link>
                                         </li>
-                                        <li class="nav-item">
+                                        <li className="nav-item">
                                             <Link className="nav-link text-dark" to="/property" >Property</Link>
                                         </li>
-                                        <li class="nav-item">
-                                            <Link className="nav-link text-dark" >Bike</Link>
+                                        <li className="nav-item">
+                                            <Link className="nav-link text-dark" to="">Bike</Link>
                                         </li>
-                                        <li class="nav-item">
+                                        <li className="nav-item">
                                             <Link className="nav-link text-dark" >Car</Link>
                                         </li>
                                     </ul>
@@ -230,13 +232,13 @@ export default function Header() {
                                 <div className="collapse navbar-collapse" id="navbarNav">
                                     <ul className="navbar-nav menu">
                                         <li className="nav-item">
-                                            <div class="">
-                                                <Link className="nav-link text-dark " to="/" data-bs-toggle="collapse" href="#collapseExample" data-bs-target="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">All categories<i class="ri-arrow-down-s-line"></i></Link>
-                                                <div class="collapse" id="collapseExample">
-                                                    <div class="card">
+                                            <div className="">
+                                                <Link className="nav-link text-dark " to="/" data-bs-toggle="collapse" href="#collapseExample" data-bs-target="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">All categories<i className="ri-arrow-down-s-line"></i></Link>
+                                                <div className="collapse" id="collapseExample">
+                                                    <div className="card">
                                                         <ul className='sub_menu'>
                                                             <li className="nav-item"><Link className="nav-link text-dark" to="/" data-bs-toggle="collapse" href="#collapseExample" data-bs-target="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">Property</Link>
-                                                                <div class="collapse" id="collapseExample1">
+                                                                <div className="collapse" id="collapseExample1">
                                                                     <ul className='link-text sub_menu1'>
                                                                         <Link to="">For Sale: Houses & Apartments</Link><br></br>
                                                                         <Link to="">For Rent: Houses & Apartments</Link><br></br>
@@ -248,7 +250,7 @@ export default function Header() {
                                                                 </div>
                                                             </li>
                                                             <li className="nav-item"><Link className="nav-link text-dark" to="/" data-bs-toggle="collapse" href="#collapseExample" data-bs-target="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">Electronics</Link>
-                                                                <div class="collapse" id="collapseExample2">
+                                                                <div className="collapse" id="collapseExample2">
                                                                     <ul className='link-text sub_menu1'>
                                                                         <Link to="">TVs, Video - Audio</Link><br></br>
                                                                         <Link to="">Kitchen & Other Appliances</Link><br></br>
@@ -263,7 +265,7 @@ export default function Header() {
                                                                     </ul>
                                                                 </div></li>
                                                             <li className="nav-item"><Link className="nav-link text-dark" to="/" data-bs-toggle="collapse" href="#collapseExample" data-bs-target="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">Bike</Link>
-                                                                <div class="collapse" id="collapseExample3">
+                                                                <div className="collapse" id="collapseExample3">
                                                                     <ul className='link-text sub_menu1'>
                                                                         <Link to="">  Motorcycles</Link><br></br>
                                                                         <Link to="">Scooters</Link><br></br>
@@ -305,10 +307,10 @@ export default function Header() {
                             <select className='header_btn4'>
                                 <option hidden>Chennai, Tamil Nadu</option>
                                 <option className='header_op1'>Use current Location</option>
-                                <hr></hr>
+                               
                                 <option className='header_op'>Recent Option</option>
                                 <option className='header_op1'>Tamil Nadu</option>
-                                <hr></hr>
+                               
                                 <option className='header_op'>Popular Location</option>
                                 <option value="saab" className='header_op1'>Mumbai, Maharashtra</option>
                                 <option className='header_op1'>Ambattur</option>
@@ -328,13 +330,3 @@ export default function Header() {
 
 
 
-<div className='select-wrapper'>
-    <i className="ri-map-pin-line text-danger pe-2"></i>
-    <select className='header_btn4'>
-        <option value="volvo" hidden>Chennai, Tamil Nadu</option>
-        <option value="saab">Mumbai, Maharashtra</option>
-        <option value="opel">Kolkata, West Bengal</option>
-        <option value="opel">Pune, Maharashtra</option>
-        <option value="opel">Hyderabad, Telangana</option>
-    </select>
-</div>

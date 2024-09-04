@@ -41,8 +41,8 @@ export default function Footer() {
             <div className='col-lg-3 col-md-6 col-sm-6'>
               <h6 className='footer_h'>Contact Us</h6>
                <div className='footer_p'>
-                  <p><i class="ri-mail-fill text-light pe-2"></i>Discount mark@gmail.com</p>
-                  <p><i class="ri-phone-fill text-light pe-2"></i>+91 96452 23547</p>
+                  <p><i className="ri-mail-fill text-light pe-2"></i>Discount mark@gmail.com</p>
+                  <p><i className="ri-phone-fill text-light pe-2"></i>+91 96452 23547</p>
                   <p><img src='assets/img/icon.png' alt='' className='img-fluid pe-2' width="20px"></img>NO 3/1,1ST STREET , MAMBALAM,CHENNAI-60033</p>
                 </div>
             </div>

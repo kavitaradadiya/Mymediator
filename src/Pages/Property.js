@@ -7,7 +7,7 @@ import CommonSection from '../Components/CommonSection';
 export default function Property() {
     const [selectedOption, setSelectedOption] = useState(null);
     const [category] = useState("PROPERTY")
-    const [allProduct, setAllProduct] = useState(products)
+    // const [allProduct, setAllProduct] = useState(products)
     const [filteredProduct, setFilteredProduct] = useState([]);
     const [priceRange, setPriceRange] = useState(null);
     const [selectedFurnishing, setSelectedFurnishing] = useState(null);
@@ -64,11 +64,11 @@ export default function Property() {
                                 <h4 data-bs-toggle="collapse" href="#collapseExample" aria-controls="collapseExample">Categories </h4>
                                 <i className="ri-arrow-down-s-line mt-2" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
                             </div>
-                            <div class="collapse" id="collapseExample">
-                                <div class="card card-body">
-                                    <h5 data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">Electronics & Appliances<i class="ri-arrow-down-s-line"></i></h5>
-                                    <div class="collapse" id="collapseExample2">
-                                        <div class="card card-body">
+                            <div className="collapse" id="collapseExample">
+                                <div className="card card-body">
+                                    <h5 data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">Electronics & Appliances<i className="ri-arrow-down-s-line"></i></h5>
+                                    <div className="collapse" id="collapseExample2">
+                                        <div className="card card-body">
                                             <ul className="Property_menu">
                                                 <li>For Sale : Houses & Apartment</li>
                                                 <li>For Rent : Houses & Apartment </li>
@@ -77,19 +77,19 @@ export default function Property() {
                                         </div>
                                     </div>
 
-                                    <h5 data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">Property<i class="ri-arrow-down-s-line"></i></h5>
-                                    <div class="collapse" id="collapseExample3">
-                                        <div class="card card-body">
+                                    <h5 data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">Property<i className="ri-arrow-down-s-line"></i></h5>
+                                    <div className="collapse" id="collapseExample3">
+                                        <div className="card card-body">
                                             <ul className="Property_menu">
-                                                <li>For Sale : Houses & Apartment</li>
-                                                <li>For Rent : Houses & Apartment</li>
-                                                <li>Lands & Plots</li>
+                                                <li>For Rent : Shops & Offices</li>
+                                                <li>For Sale : Shops & Offices</li>
+                                                <li>PG & Guest Houses</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <h5 data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">Bike<i class="ri-arrow-down-s-line"></i></h5>
-                                    <div class="collapse" id="collapseExample4">
-                                        <div class="card card-body">
+                                    <h5 data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">Bike<i className="ri-arrow-down-s-line"></i></h5>
+                                    <div className="collapse" id="collapseExample4">
+                                        <div className="card card-body">
                                             <ul className="Property_menu">
                                                 <li>Motorcycles</li>
                                                 <li>Scooters</li>
@@ -102,15 +102,15 @@ export default function Property() {
                                 </div>
                             </div>
                         </div>
-                        <hr></hr>
+                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
                         <div className='electronic'>
                             <h4>Filter</h4>
                             <div className='justify-content-between d-flex'>
                                 <h4 data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">Price</h4>
                                 <i className="ri-arrow-down-s-line mt-2" data-bs-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample"></i>
                             </div>
-                            <div class="collapse" id="collapseExample5">
-                                <div class="card card-body">
+                            <div className="collapse" id="collapseExample5">
+                                <div className="card card-body">
                                     <button
                                         className={`property_btn ${priceRange === "Below 1 Lac" ? 'selected' : ''}`}
                                         onClick={() => handlePriceFilter("Below 1 Lac")}
@@ -203,7 +203,7 @@ export default function Property() {
                             </button>
                         </div>
 
-                        <hr></hr>
+                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
                         <div className='electronic'>
                             <div className='justify-content-between d-flex'>
                                 <h4>Furnishing</h4>
@@ -236,7 +236,7 @@ export default function Property() {
                                 <p>0</p>
                                 <p>1,000,000 +</p>
                             </div>
-                            <input type="range" class="form-range" min="0" max="5" id="customRange2"></input>
+                            <input type="range" className="form-range" min="0" max="5" id="customRange2"></input>
                         </div>
                         <hr></hr>
                         <div className='electronic'>
@@ -261,7 +261,7 @@ export default function Property() {
                                 4+ Bathrooms
                             </button>
                         </div>
-                        <hr></hr>
+                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
                         <div className='electronic'>
                             <h4>Construction Status</h4>
                             <div className="form-check">
@@ -283,7 +283,7 @@ export default function Property() {
                                 </label>
                             </div>
                         </div>
-                        <hr></hr>
+                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
                         <div className='electronic'>
                             <h4>Listed By</h4>
                             <div className="form-check ">
@@ -305,14 +305,14 @@ export default function Property() {
                                 </label>
                             </div>
                         </div>
-                        <hr></hr>
+                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
                         <div className='electronic'>
                             <h4>Super Buildup Area</h4>
                             <div className='justify-content-between d-flex'>
                                 <p>0</p>
                                 <p>1,000,000 +</p>
                             </div>
-                            <input type="range" class="form-range" min="0" max="10000" id="customRange2"></input>
+                            <input type="range" className="form-range" min="0" max="10000" id="customRange2"></input>
                         </div>
                     </div>
                     <div className='col-lg-8 col-md-8 col-sm-6'>

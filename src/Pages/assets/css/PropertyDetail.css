@@ -1,0 +1,429 @@
+.Property_img {
+    height: 250px;
+}
+
+.Property_detail h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 34px;
+}
+
+.Property_detail h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.Property_detail span {
+    font-family: 'SF UI Display', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: right;
+}
+
+.Property_detail h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: -0.9px;
+    text-align: left;
+}
+
+.propertydetail_price {
+    font-family: 'SF UI Display', sans-serif;
+    font-size: 47px;
+    font-weight: 600;
+    line-height: 66px;
+    letter-spacing: -1.66px;
+}
+
+.propertydetail_btn {
+    background-color: #02487C;
+    color: #fff;
+    border-radius: 36px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.Propertydetail_rec {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.propertydetail_box {
+    border: 1px solid #CFCFCF;
+    border-radius: 10px;
+    box-shadow: 3px 6px 10px 0px #83838340;
+    box-shadow: -2px 0px 4px 0px #94949440;
+
+}
+
+.des h3 {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 25.26px;
+    text-align: left;
+}
+
+.des p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+
+}
+
+.Property_box2 {
+    border: 1px solid #E8E8E8;
+    border-radius: 25px;
+}
+
+.property_link {
+    font-size: 12px;
+    text-align: left;
+    margin-left: -40px;
+    color: #000;
+}
+
+.Profile_link_mt {
+    margin-top: 50px;
+}
+
+.property_profile h5 {
+    font-family: Poppins;
+    font-size: 18.17px;
+    font-weight: 600;
+    line-height: 25.76px;
+}
+
+.property_profile p {
+    font-family: Poppins;
+    font-size: 14.28px;
+    font-weight: 500;
+    line-height: 20.24px;
+    color: #8D8D8D;
+}
+
+.rounded-20 {
+    border-radius: 10%;
+}
+
+.id_detail {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+
+}
+
+.id_detail span {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+
+}
+
+.ad_detail {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    color: #02487C;
+}
+
+.dec_type p {
+    font-family: Poppins;
+    font-size: 15.7px;
+    font-weight: 600;
+    line-height: 24.79px;
+}
+
+.dec_det p {
+    font-family: Poppins;
+    font-size: 15.7px;
+    font-weight: 500;
+    line-height: 24.79px;
+}
+
+.pd-left {
+    margin-left: -30px;
+}
+
+.icon-style {
+    width: 20px;
+    /* Adjust the icon size */
+    margin-right: 8px;
+    /* Space between icon and text */
+}
+
+.icon_p {
+    font-size: 12px;
+}
+
+.text-content p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* --------------model-------------- */
+
+
+.modal-content {
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.form-control {
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #003366;
+    /* Customize the button color */
+    border: none;
+    border-radius: 10px;
+}
+
+.modal-title {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26.43px;
+    text-align: center;
+    /* padding-top: 20px; */
+
+}
+
+.form-label {
+    font-family: Poppins;
+    font-size: 14.89px;
+    font-weight: 600;
+    line-height: 28.85px;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.form-control {
+    font-family: Poppins;
+    font-size: 14.89px;
+    font-weight: 500;
+    line-height: 28.85px;
+    text-align: center;
+    color: #8C8C8C;
+    text-align: left;
+}
+
+.model_bg {
+    background-color: #02487C;
+    width: 80%;
+    height: 250px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.model-title1 {
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 37.3px;
+    /* text-align: center; */
+}
+.model-title2{
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 37.3px;
+    text-align: left;
+}
+
+
+.feedback_btn {
+    background-color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 12px 100px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+.comment_btn{
+    font-family: Poppins;
+font-size: 23px;
+font-weight: 700;
+line-height: 29.27px;
+text-align: center;
+color: #fff;
+background-color: #02487C;
+padding: 10px 60px;
+border-radius: 25px;
+border: none;
+}
+/* ----------comment_model------------- */
+
+
+
+@media(max-width:576px) {
+    .property_link {
+        margin-left: 0px !important;
+        text-align: center !important;
+        font-size: 14px;
+    }
+
+    .Profile_link_mt {
+        margin-top: 0px !important;
+        text-align: center !important;
+    }
+
+    .property_profile h5 {
+        text-align: center !important;
+    }
+
+    .property_profile p {
+        text-align: center !important;
+    }
+
+    .profile_img_set {
+        width: 40% !important;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        /* Stack items on small screens */
+        align-items: center;
+        /* Center items */
+    }
+
+    .icon-style {
+        margin-right: 0;
+        margin-bottom: 4px;
+        /* Add space between icon and text */
+    }
+
+    .icon_mt {
+        margin-bottom: 20px !important;
+    }
+    
+    .model-title1 {
+        font-size: 18px;
+    }
+    
+    .feedback_btn {
+        border-radius: 25px;
+        padding: 10px 35px;
+        font-size: 14px; 
+    }
+    .rating {
+        font-size: 1rem; /* Further reduce size for very small screens */
+      }
+    
+}
+
+@media(max-width:425px) {
+    .property_link {
+        margin-left: 0px !important;
+        text-align: center !important;
+        font-size: 14px;
+    }
+
+    .Profile_link_mt {
+        margin-top: 0px !important;
+        text-align: center !important;
+    }
+
+    .property_profile h5 {
+        text-align: center !important;
+    }
+
+    .property_profile p {
+        text-align: center !important;
+    }
+
+    .profile_img_set {
+        width: 40% !important;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@media(max-width:370px) {
+    .Property_img {
+        height: 100px;
+        margin-top: 20px;
+    }
+
+    .Property_detail h4 {
+        font-size: 18px;
+    }
+
+    .Property_detail h3 {
+        font-size: 20px;
+    }
+
+    .Property_detail h2 {
+        font-size: 22px;
+    }
+
+    .propertydetail_price {
+        font-size: 25px;
+    }
+
+    .property_link {
+        margin-left: 0px !important;
+        text-align: center !important;
+        font-size: 14px;
+    }
+
+    .Profile_link_mt {
+        margin-top: 0px !important;
+        text-align: center;
+    }
+
+    .property_profile h5 {
+        text-align: center;
+    }
+
+    .property_profile p {
+        text-align: center;
+    }
+
+    .profile_img_set {
+        width: 40% !important;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+
+}
