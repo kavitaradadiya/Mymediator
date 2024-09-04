@@ -1,5 +1,5 @@
 .property_bg{
-    /* background-image: url('../img/propery_bg.png'); */
+    background-image: url('../img/property_bg.png');
     height: 70px;
     background-size: cover;
 }
@@ -20,6 +20,7 @@
     border: 1px solid #B6B6B6;
     border-radius: 13px;
     background-color: #fff;
+    /* height: 500px; */
 }
 .electronic .collapse {
     max-height: 200px; 

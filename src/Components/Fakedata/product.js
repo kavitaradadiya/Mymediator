@@ -1,4 +1,6 @@
 import product_01_image_01 from "../Fakedata/images/Frame1.png";
+import product_01_image_02 from "../Fakedata/images/Frame11.png";
+import product_01_image_03 from "../Fakedata/images/Frame12.png";
 import product_02_image_01 from "../Fakedata/images/Frame2.png";
 import product_03_image_01 from "../Fakedata/images/Frame3.png";
 import product_04_image_01 from "../Fakedata/images/Frame4.png";
@@ -36,6 +38,8 @@ const products = [
       title: "Maruti Suzuki",
       price: 300000,
       image01: product_01_image_01,
+      image02 : product_01_image_02,
+      image03 : product_01_image_03,
       location:"West Mambalam, Chennai",
       detail:"2021-10.000km",
       category :"Car"
@@ -45,6 +49,8 @@ const products = [
      title: "Dinesh house ",
      price:690000  ,
      image01: product_02_image_01,
+     image02: product_02_image_01,
+     image03: product_02_image_01,
      location:"West Mambalam, ",
      detail :"# 800 Sq . Ft",
      category :"Property"

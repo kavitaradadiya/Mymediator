@@ -8,7 +8,6 @@ import './assets/css/Header.css'
 import './assets/css/Footer.css'
 import './assets/css/Home.css'
 import './assets/css/Property.css'
-import location_img from '../img/frame185.png'
 import mdi_speaking from '../img/mdi_speaking.png'
 import frame185 from '../img/call.png'
 import icon1 from '../img/icon1.png'
@@ -19,15 +18,52 @@ import icon5 from '../img/icon5.png'
 import icon6 from '../img/icon6.png'
 import star from '../img/Vector1.png'
 import Ellipse from '../img/Ellipse158.png'
-import map from '../img/map.png'
 import iphone15 from '../img/iPhone15.png'
 import logo3 from '../img/logo3.png'
 import logo4 from '../img/logo4.png'
 import vector from '../img/Vector.png'
 import StarRatings from 'react-star-ratings';
+import group4 from "../img/group4.png"
+import Slider from 'react-slick';
+// import Map from './Map'
+
 
 
 export default function PropertyDetail() {
+
+// ------------slider---------
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
+// -----------------------model---------------------------------
   const [rating, setRating] = useState(0);
   const [showCommentModal, setShowCommentModal] = useState(false);
   const [comment, setComment] = useState('');
@@ -61,7 +97,8 @@ export default function PropertyDetail() {
     setShowCommentModal(false); // Hide comment modal after submission
   };
 
-  const handleOpenSubmitModal = () => {
+  const handleOpenSubmitModal = (e) => {
+    e.preventDefault()
     const enquiryModal = document.getElementById('enquiryModal');
     const modalInstance = window.bootstrap.Modal.getInstance(enquiryModal);
     modalInstance.hide();
@@ -71,6 +108,8 @@ export default function PropertyDetail() {
       submitModal.show();
     });
   };
+
+  // ---------------------------------productdetail------------------------
   const { id } = useParams()
   console.log(id);
 
@@ -78,7 +117,7 @@ export default function PropertyDetail() {
   const Product = products.find(item => item.id === id)
   console.log(Product)
 
-  const { title, price, category, location, image01 } = Product;
+  const { title, price, category, location, image01, image02, image03 } = Product;
 
   const [preImage, setPreImage] = useState(image01);
 
@@ -89,22 +128,22 @@ export default function PropertyDetail() {
     if (category === "Property") {
       const FilterProduct = products.filter(item => item.category === "Property")
       // console.log(FilterProduct);
-      setAllProduct(FilterProduct.slice(0, 4))
+      setAllProduct(FilterProduct)
     }
     if (category === "Car") {
       const FilterProduct = products.filter(item => item.category === "Car")
       // console.log(FilterProduct);
-      setAllProduct(FilterProduct.slice(0, 4))
+      setAllProduct(FilterProduct)
     }
     if (category === "Bike") {
       const FilterProduct = products.filter(item => item.category === "Bike")
       // console.log(FilterProduct);
-      setAllProduct(FilterProduct.slice(0, 4))
+      setAllProduct(FilterProduct)
     }
     if (category === "Electronic") {
       const FilterProduct = products.filter(item => item.category === "Electronic")
       // console.log(FilterProduct);
-      setAllProduct(FilterProduct.slice(0, 4))
+      setAllProduct(FilterProduct)
     }
 
   }, [category])
@@ -135,8 +174,7 @@ export default function PropertyDetail() {
                 <img src={preImage} alt='' className='img-fluid Property_img'></img>
               </div>
               <div className='Property_detail mt-4'>
-                <h2>{title}</h2>
-
+                <h2>{title}  <img src={group4} alt='' width="35%" className='ms-2'></img></h2>
                 <h3 className='mt-3'>{category}2021 <span className='ps-4'><img src={star} alt='' className='img-fluid pe-2' width="30px"></img>4.5</span></h3>
                 <h4 className='mt-3'><i className="ri-map-pin-2-fill product_icon pe-1"></i>{location}</h4>
               </div>
@@ -144,7 +182,37 @@ export default function PropertyDetail() {
           </div>
           <div className='col-lg-6 col-md-6 col-sm-12 col-12 mt-3'>
             <div className=''>
-              <img src={location_img} alt='location-img' className='img-fluid mx-auto d-block' width="60%"></img>
+              <div className='Property_box4 mx-auto d-block'>
+                <div className=' row Property_box2 mt-2 me-2 ms-2'>
+                  <div className='col-lg-4 col-md-4 col-sm-4'>
+                    <img src={Ellipse} alt='' className='img-fluid profile_img_set' width="80%"></img>
+                  </div>
+                  <div className='col-lg-6 col-md-6 col-sm-6 '>
+                    <div className='property_profile mt-2 mx-auto d-block'>
+                      <h5>Jayalakshmi</h5>
+                      <p>Owner</p>
+                    </div>
+                  </div>
+                  <div className='col-lg-2 col-md-2 col-sm-2 Profile_link_mt'>
+                    <Link className='property_link'>SeeProfile</Link>
+                  </div>
+                </div>
+                <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
+                <div className='row'>
+                  <div className='col-lg-6 col-md-6 col-sm-12'>
+                  <div className="d-flex align-items-center ms-4 mt-2">
+                    <img src={icon5} alt="Icon" className="icon-style"></img>
+                    <div className="text-content">
+                      <p className="mb-0 icon_p">T.nagar</p>
+                      <p className="mb-0 fw-bold">Chennai</p>
+                    </div>
+                  </div>
+                  </div>
+                  <div className='col-lg-6 col-md-6 col-sm-12'>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29749.225774882685!2d72.84343101893258!3d21.245595574425934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4fb5c0b087%3A0xb7aabd8a90da0679!2sMota%20Varachha%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1690017805909!5m2!1sen!2sin" width="70%" height="45%" title='map' className='map_border mx-auto d-block'></iframe>
+                  </div>
+                </div>
+              </div>
               <div className='text-center mt-5'>
                 <h3 className='propertydetail_price'>₹ {price}</h3>
 
@@ -154,10 +222,10 @@ export default function PropertyDetail() {
                 </button>
 
                 {/* --------------Enquiry-model---------------- */}
-                
+
                 <div className="modal fade" id="enquiryModal" tabIndex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
                   <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
+                    <div className="modal-content model_size">
                       <div className="modal-header mx-auto d-block">
                         <h5 className="modal-title pt-4" id="enquiryModalLabel">Enquiry Now</h5>
                       </div>
@@ -226,6 +294,7 @@ export default function PropertyDetail() {
                     </div>
                   </div>
                 </div>
+
                 {/* ------------comment-model----------------- */}
 
                 <div className={`modal fade ${showCommentModal ? 'show' : ''}`} id="commentModal" tabIndex="-1" aria-labelledby="commentModalLabel" aria-hidden={!showCommentModal} style={{ display: showCommentModal ? 'block' : 'none' }}>
@@ -233,7 +302,6 @@ export default function PropertyDetail() {
                     <div className="modal-content model_bg1">
                       <div className="modal-header">
                         <h5 className="modal-title mx-auto d-block model-title1 " id="commentModalLabel">Report Ads</h5>
-
                       </div>
                       <div className="modal-body">
                         <h5 className='model-title2'>Enter Your Feedback </h5>
@@ -248,7 +316,7 @@ export default function PropertyDetail() {
                             />
                           </div>
                           <div className="text-center mt-4">
-                            <button type="submit" className="comment_btn" data-bs-dismiss="modal">Submit</button>
+                            <button type="submit" className="comment_btn" data-bs-dismiss="modal" data-bs-target="#staticBackdrop">Submit</button>
                           </div>
                         </form>
                       </div>
@@ -265,9 +333,9 @@ export default function PropertyDetail() {
       <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
       <section className='container mb-3'>
         <div className='row'>
-          <div className='col-lg-7 col-md-7 col-sm-7 propertydetail_box '>
+          <div className='col-lg-7 col-md-7 col-sm-7 '>
 
-            <div className='container'>
+            <div className='container propertydetail_box '>
               <div className='row pt-4'>
                 <div className='col-lg-4 col-md-4 col-sm-4 text-center'>
                   <p><img src={icon1} alt='' className='img-fluid' width="20%"></img>990 Sq . Ft</p>
@@ -319,7 +387,7 @@ export default function PropertyDetail() {
             </div>
           </div>
 
-          <div className='col-lg-5 col-md-5 col-sm-5 propertydetail_box '>
+          <div className='col-lg-5 col-md-5 col-sm-5 propertydetail_box_set'>
             <div className=' row Property_box2 mt-2 me-2 ms-2'>
               <div className='col-lg-4 col-md-4 col-sm-4'>
                 <img src={Ellipse} alt='' className='img-fluid profile_img_set' width="80%"></img>
@@ -337,7 +405,11 @@ export default function PropertyDetail() {
 
             <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
             <div className='mt-5'>
-              <img src={map} alt='' className='img-fluid rounded-20 mx-auto d-block' width="70%"></img>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29749.225774882685!2d72.84343101893258!3d21.245595574425934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4fb5c0b087%3A0xb7aabd8a90da0679!2sMota%20Varachha%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1690017805909!5m2!1sen!2sin" title='map' className='mx-auto d-block map_border1'></iframe>
+
+
+
+
             </div>
             <div className='mt-3 mb-4'>
               <p className='m-0 p-0 text-center'><img src={icon5} alt='' className='img-fluid pe-2' width="10%"></img>T.Nagar<br></br>Chennai</p>
@@ -354,7 +426,7 @@ export default function PropertyDetail() {
       </section>
 
       <section className='container mb-3'>
-        <div className='row propertydetail_box p-4'>
+        <div className='row propertydetail_box1 p-4'>
           <div className='col-lg-4 col-md-4 col-sm-4 col-12'>
             <div className='row'>
               <div className='col-lg-6 col-md-6 col-sm-6 col-6 dec_type'>
@@ -411,17 +483,15 @@ export default function PropertyDetail() {
       </section>
 
       <section className='container'>
-        <div className='row'>
-          <h2 className='Propertydetail_rec'>Recommended Property</h2>
-          {
-            allProduct.map((item) => {
-              return <div className='col-lg-3 col-md-3 col-sm-6' key={item.id}>
-                <ProductCard items={item}></ProductCard>
-              </div>
-            })
-          }
-        </div>
-      </section>
+      <h2 className='Propertydetail_rec'>Recommended Property</h2>
+      <Slider {...settings}>
+        {allProduct.map((item) => (
+          <div key={item.id} className='p-2'>
+            <ProductCard items={item} />
+          </div>
+        ))}
+      </Slider>
+    </section>
 
 
       <section className='container home_box mt-5'>

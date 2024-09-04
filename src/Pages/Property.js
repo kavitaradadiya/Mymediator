@@ -3,6 +3,9 @@ import Carousel from './Slider/Carousel'
 import products from '../Components/Fakedata/product'
 import ProductCard from './Category/ProductCard'
 import CommonSection from '../Components/CommonSection';
+import RangeSlider from 'react-range-slider-input';
+import 'react-range-slider-input/dist/style.css';
+
 
 export default function Property() {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -236,7 +239,7 @@ export default function Property() {
                                 <p>0</p>
                                 <p>1,000,000 +</p>
                             </div>
-                            <input type="range" className="form-range" min="0" max="5" id="customRange2"></input>
+                            <RangeSlider />
                         </div>
                         <hr></hr>
                         <div className='electronic'>
@@ -306,13 +309,13 @@ export default function Property() {
                             </div>
                         </div>
                         <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
-                        <div className='electronic'>
+                        <div className='electronic pb-3'>
                             <h4>Super Buildup Area</h4>
                             <div className='justify-content-between d-flex'>
                                 <p>0</p>
                                 <p>1,000,000 +</p>
                             </div>
-                            <input type="range" className="form-range" min="0" max="10000" id="customRange2"></input>
+                            <RangeSlider />
                         </div>
                     </div>
                     <div className='col-lg-8 col-md-8 col-sm-6'>

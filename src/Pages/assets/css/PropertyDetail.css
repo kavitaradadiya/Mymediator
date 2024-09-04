@@ -64,8 +64,31 @@
     border-radius: 10px;
     box-shadow: 3px 6px 10px 0px #83838340;
     box-shadow: -2px 0px 4px 0px #94949440;
-
+    height: 550px;
+    background-color: #fff;
 }
+.propertydetail_box_set{
+    border: 1px solid #CFCFCF;
+    border-radius: 10px;
+    box-shadow: 3px 6px 10px 0px #83838340;
+    box-shadow: -2px 0px 4px 0px #94949440;
+    height: 550px;
+    background-color: #fff;
+}
+.propertydetail_box1 {
+    border: 1px solid #CFCFCF;
+    border-radius: 10px;
+    box-shadow: 3px 6px 10px 0px #83838340;
+    box-shadow: -2px 0px 4px 0px #94949440;
+    background-color: #fff;
+}
+.map_border{
+    border-radius: 25px;
+}
+.map_border1{
+    border-radius: 25px;
+}
+
 
 .des h3 {
     font-family: Poppins;
@@ -81,12 +104,25 @@
     font-weight: 400;
     line-height: 36px;
     text-align: left;
+    height: 100px;
 
 }
 
 .Property_box2 {
     border: 1px solid #E8E8E8;
+    border-radius: 40px;
+}
+.Property_box3 {
+    border: 1px solid #E8E8E8;
     border-radius: 25px;
+    background-color: #fff;
+}
+.Property_box4 {
+    border: 1px solid #B6B6B6;
+    border-radius: 13px;
+    background-color: #fff;
+    width: 300px;
+    height: 210px;
 }
 
 .property_link {
@@ -181,7 +217,9 @@
 }
 
 /* --------------model-------------- */
-
+.model_size{
+    width: 100%;
+}
 
 .modal-content {
     border-radius: 20px;
@@ -288,7 +326,21 @@ border: none;
 }
 /* ----------comment_model------------- */
 
-
+@media(max-width:768px){
+    .propertydetail_box{
+        height: 688px !important;
+    }
+    .propertydetail_box_set{
+        height: 678px !important;
+        margin-top: 10px;
+    }
+    .Property_box4{
+        height: 230px !important;
+    }
+    .map_border1{
+        width: 200px;
+    }
+}
 
 @media(max-width:576px) {
     .property_link {
@@ -374,7 +426,18 @@ border: none;
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }.propertydetail_box{
+        height: 1145px !important;
     }
+    .propertydetail_box_set{
+        height: 710px !important;
+        margin-top: 10px;
+    }
+    .Property_box4{
+        height: 410px !important;
+        width: 250px !important;
+    }
+
 }
 
 @media(max-width:370px) {
@@ -424,6 +487,17 @@ border: none;
         margin-right: auto;
         display: block;
     }
+    .propertydetail_box{
+        height: 1145px !important;
+    }
+    .propertydetail_box_set{
+        height: 710px !important;
+        margin-top: 10px;
+    }
+    .Property_box4{
+        height: 410px !important;
+    }
+    
 
 
 }

@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import bell from '../img/bell1.png'
 import logo from '../img/logo.png'
+import mask1 from '../img/Mask group.png'
+import mask2 from '../img/Group 8933.png'
+import mask3 from '../img/Mask group3.png'
+import '../Pages/assets/css/Header.css'
 
 export default function Header() {
     return (
@@ -103,7 +107,7 @@ export default function Header() {
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
-                                                                                                                    <img src='assets/img/Mask group3.png' alt='' className='img-fluid'></img>
+                                                                                                                    <img src={mask3} alt='' className='img-fluid'></img>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -113,7 +117,7 @@ export default function Header() {
                                                                                         </div>
                                                                                     </div>
                                                                                     <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
-                                                                                        <img src='assets/img/Group 8933.png' alt='' className='img-fluid'></img>
+                                                                                        <img src={mask2} alt='' className='img-fluid'></img>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -123,7 +127,7 @@ export default function Header() {
                                                             </div>
                                                         </div>
                                                         <div className='col-lg-6 col-md-6 col-sm-6 col-6'>
-                                                            <img src='assets/img/Mask group.png' alt='' className='img-fluid'></img>
+                                                            <img src={mask1} alt='' className='img-fluid'></img>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -325,8 +329,3 @@ export default function Header() {
         </>
     )
 }
-
-
-
-
-
