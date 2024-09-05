@@ -28,7 +28,7 @@ import product_25_image_01 from "../Fakedata/images/Frame25.png";
 import product_26_image_01 from "../Fakedata/images/Frame26.png";
 import product_27_image_01 from "../Fakedata/images/Frame27.png";
 import product_28_image_01 from "../Fakedata/images/Frame28.png";
-import '../../img/sq.fit.png'
+import squre from "../../img/sq.fit.png"
 
 
 
@@ -37,29 +37,30 @@ const products = [
     {
       id: "01",
       title: "Maruti Suzuki",
-      price: 300000,
+      price: "3L",
       image01: product_01_image_01,
-      image02 : product_01_image_02,
-      image03 : product_01_image_03,
+      image02 : product_28_image_01,
+      image03 : product_27_image_01,
       location:"West Mambalam, Chennai",
       detail:"2021-10.000km",
-      category :"Car"
+      category :"Car",
+      
     },
     {
      id: "02",
      title: "Dinesh house ",
-     price:690000  ,
+     price:"6.9 L",
      image01: product_02_image_01,
      image02: product_02_image_01,
      image03: product_02_image_01,
      location:"West Mambalam, ",
      detail :"800 Sq . Ft",
-     category :"Property"
+     category :"Property",icon: squre
     },
     {
      id: "03",
      title: "Apple Mac Book Air",
-     price: 90000,
+     price: "9 L",
      image01: product_03_image_01,
      location:"West Mambalam, Chennai",
      detail :"2021",
@@ -69,7 +70,7 @@ const products = [
     {
      id: "04",
      title: "PALSUE 200 NS",
-     price: 106000,
+     price: "1.6 L",
      image01: product_04_image_01,
      location:"West Mambalam, Chennai",
      detail:"2021-10.000km",
@@ -78,7 +79,7 @@ const products = [
     {
      id: "05",
      title: "KTM 200 DUKE",
-     price:280000 ,
+     price:"2.8 L",
      image01: product_05_image_01,
      location:"West Mambalam, Chennai",
      detail:"2023- 10,000km",
@@ -87,7 +88,7 @@ const products = [
     {
       id: "06",
       title: "Tata Safari",
-      price: 350000,
+      price: "3.5 L",
       image01: product_06_image_01,
       location:"West Mambalam, Chennai",
       detail:"2022 - 13,000 km",
@@ -96,7 +97,7 @@ const products = [
      {
       id: "07",
       title: "Norton Dominator",
-      price:250000,
+      price:"2.5 L",
       image01: product_07_image_01,
       location:"West Mambalam, Chennai",
       detail:"2023 - 10,000 km",
@@ -105,7 +106,7 @@ const products = [
      {
       id: "08",
       title: "Apple MacBook Pro ",
-      price: 80000,
+      price: "8 L",
       image01: product_08_image_01,
       location:"West Mambalam, Chennai",
       detail:"2022",
@@ -114,16 +115,16 @@ const products = [
      {
       id: "09",
       title: "Kali house ",
-      price: 4500000,
+      price: "4.5 L",
       image01: product_09_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "10",
       title: "TOYOTA ETIOS",
-      price: 250000 ,
+      price: "2.5 L",
       image01: product_10_image_01,
       location:"West Mambalam, Chennai",
       detail:"2022 - 13,000km",
@@ -132,25 +133,25 @@ const products = [
      {
       id: "11",
       title: "Sanjay house ",
-      price:9.9 ,
+      price:"9.9 L",
       image01: product_11_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "12",
       title: "Selva house ",
-      price:990000 ,
+      price: "9.9 L",
       image01: product_12_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "13",
       title: "TATA NEXON",
-      price:300000,
+      price:"3 L",
       image01: product_13_image_01,
       location:"West Mambalam, Chennai",
       detail:"2022 - 13,000km",
@@ -159,7 +160,7 @@ const products = [
      {
       id: "14",
       title: "Acer Aspire 3 i5",
-      price:65000 ,
+      price:"6.5 L" ,
       image01: product_14_image_01,
       location:"West Mambalam, Chennai",
       detail :"2021",
@@ -168,7 +169,7 @@ const products = [
      {
       id: "15",
       title: "Revolt RV400 STD",
-      price:260000,
+      price:"2.6",
       image01: product_15_image_01,
       location:"West Mambalam, Chennai",
       detail:"2022 - 10,000 km",
@@ -177,7 +178,7 @@ const products = [
      {
       id: "16",
       title: "Microsoft Surface",
-      price:80000,
+      price:"8 L",
       image01: product_16_image_01,
       location:"West Mambalam, Chennai",
       detail:"2022",
@@ -186,7 +187,7 @@ const products = [
      {
       id: "17",
       title: "Toyota Camry",
-      price:340000,
+      price:"3.4 L",
       image01: product_17_image_01,
       location:"West Mambalam, Chennai",
       detail:"2021 - 10,000 km",
@@ -195,16 +196,16 @@ const products = [
      {
       id: "18",
       title: "Kaviya house ",
-      price:990000,
+      price:"9.9 L",
       image01: product_18_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "19",
       title: "Kawasaki ZX-10R",
-      price:450000,
+      price:"4.5 L",
       image01: product_19_image_01,
       location:"West Mambalam, Chennai",
       detail:"2023 - 10,000 km",
@@ -213,16 +214,16 @@ const products = [
      {
       id: "20",
       title: "Sanjay house ",
-      price:990000,
+      price:"9.9 L",
       image01: product_20_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "21",
       title: "Apple MacBook Pro ",
-      price:80000,
+      price:"8 L",
       image01: product_21_image_01,
       location:"West Mambalam, Chennai",
       detail :"2022",
@@ -231,7 +232,7 @@ const products = [
      {
       id: "22",
       title: "TVS RIDER",
-      price:1500000,
+      price:"1.8 L",
       image01: product_22_image_01,
       location:"West Mambalam, Chennai",
       detail :"2021-10,000km",
@@ -240,7 +241,7 @@ const products = [
      {
       id: "23",
       title: "MAHINDRA XUV300",
-      price:260000,
+      price:"2.6 L",
       image01: product_23_image_01,
       location:"West Mambalam, Chennai",
       detail :"2022-13,000km",
@@ -249,7 +250,7 @@ const products = [
      {
       id: "24",
       title: "ASUS Strix G17",
-      price:88000,
+      price: "8 L",
       image01: product_24_image_01,
       location:"West Mambalam, Chennai",
       detail :"2022",
@@ -258,16 +259,16 @@ const products = [
      {
       id: "25",
       title: "RKM house ",
-      price:990000,
+      price:"9.9 L",
       image01: product_25_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "26",
       title:"MARUTI SUZUKI",
-      price:220000,
+      price:"2.2 L",
       image01: product_26_image_01,
       location:"West Mambalam, Chennai",
       detail :"2021-10,000km",
@@ -276,7 +277,7 @@ const products = [
      {
       id: "27",
       title: "HP C17 LAPTOP",
-      price:45000,
+      price:"4.5 L",
       image01: product_27_image_01,
       location:"West Mambalam, Chennai",
       detail :"2022",
@@ -285,11 +286,11 @@ const products = [
      {
       id: "28",
       title: "Dhanush house ",
-      price:5090000,
+      price:"5.90 L",
       image01: product_28_image_01,
       location:"West Mambalam, Chennai",
       detail :"# 800 Sq.Ft",
-       category :"Property"
+       category :"Property",icon: squre
      },
 
     //  --------------------Repeat--------------
@@ -308,8 +309,8 @@ const products = [
      price:300000  ,
      image01: product_02_image_01,
      location:"West Mambalam, ",
-     detail :"# 800 Sq . Ft",
-     category :"Property"
+     detail :" 800 Sq . Ft",
+     category :"Property",icon: squre
     },
     {
      id: "31",
@@ -372,8 +373,8 @@ const products = [
       price: 400000,
       image01: product_09_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "38",
@@ -390,8 +391,8 @@ const products = [
       price:9.9 ,
       image01: product_11_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "40",
@@ -399,8 +400,8 @@ const products = [
       price:500000 ,
       image01: product_12_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "41",
@@ -453,8 +454,8 @@ const products = [
       price:350000,
       image01: product_18_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "47",
@@ -471,8 +472,8 @@ const products = [
       price:990000,
       image01: product_20_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "49",
@@ -516,8 +517,8 @@ const products = [
       price:200000,
       image01: product_25_image_01,
       location:"West Mambalam, Chennai",
-      detail :"# 800 Sq . Ft",
-       category :"Property"
+      detail :" 800 Sq . Ft",
+       category :"Property",icon: squre
      },
      {
       id: "54",
@@ -544,7 +545,7 @@ const products = [
       image01: product_28_image_01,
       location:"West Mambalam, Chennai",
       detail :"# 800 Sq.Ft",
-       category :"Property"
+       category :"Property",icon: squre
      },
 
 

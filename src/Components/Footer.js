@@ -1,4 +1,5 @@
 import React from 'react'
+import logo2 from '../img/logo2.png'
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           <div className='row'>
             <div className='col-lg-3 col-md-6 col-sm-6'>
               <div>
-                <img src='assets/img/logo2.png' className='img-fluid' alt=''></img>
+                <img src={logo2} className='img-fluid' alt=''></img>
               </div>
               <div className='mt-4'>
                 <p className='footer_p'>In other words, he gets up every morning to help people in his community find their dream home</p>

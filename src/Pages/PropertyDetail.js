@@ -25,45 +25,44 @@ import vector from '../img/Vector.png'
 import StarRatings from 'react-star-ratings';
 import group4 from "../img/group4.png"
 import Slider from 'react-slick';
-// import Map from './Map'
 
 
 
 export default function PropertyDetail() {
 
-// ------------slider---------
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
+  // ------------slider---------
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
       },
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
-// -----------------------model---------------------------------
+  // -----------------------model---------------------------------
   const [rating, setRating] = useState(0);
   const [showCommentModal, setShowCommentModal] = useState(false);
   const [comment, setComment] = useState('');
@@ -117,7 +116,7 @@ const settings = {
   const Product = products.find(item => item.id === id)
   console.log(Product)
 
-  const { title, price, category, location, image01, image02, image03 } = Product;
+  const { title, price, category, location, image01, image02, image03} = Product;
 
   const [preImage, setPreImage] = useState(image01);
 
@@ -168,10 +167,29 @@ const settings = {
                 <div onClick={() => setPreImage(image01)}>
                   <img src={image01} alt='' className='img-fluid mt-2' width="90%"></img>
                 </div>
-
               </div>
               <div className='col-lg-8 col-md-8 col-sm-8 col-8 mt-1'>
-                <img src={preImage} alt='' className='img-fluid Property_img'></img>
+                <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <img className="d-block w-100" src={image01} alt="First slide" height="250px" />
+                    </div>
+                    <div className="carousel-item">
+                      <img className="d-block w-100" src={image01} alt="Second slide" height="250px"  />
+                    </div>
+                    <div className="carousel-item">
+                      <img className="d-block w-100" src={image01} alt="Third slide" height="250px"  />
+                    </div>
+                  </div>
+                  <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                  </a>
+                  <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                  </a>
+                </div>
               </div>
               <div className='Property_detail mt-4'>
                 <h2>{title}  <img src={group4} alt='' width="35%" className='ms-2'></img></h2>
@@ -200,16 +218,16 @@ const settings = {
                 <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
                 <div className='row'>
                   <div className='col-lg-6 col-md-6 col-sm-12'>
-                  <div className="d-flex align-items-center ms-4 mt-2">
-                    <img src={icon5} alt="Icon" className="icon-style"></img>
-                    <div className="text-content">
-                      <p className="mb-0 icon_p">T.nagar</p>
-                      <p className="mb-0 fw-bold">Chennai</p>
+                    <div className="d-flex align-items-center ms-4 mt-2">
+                      <img src={icon5} alt="Icon" className="icon-style"></img>
+                      <div className="text-content">
+                        <p className="mb-0 icon_p">T.nagar</p>
+                        <p className="mb-0 fw-bold">Chennai</p>
+                      </div>
                     </div>
                   </div>
-                  </div>
                   <div className='col-lg-6 col-md-6 col-sm-12'>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29749.225774882685!2d72.84343101893258!3d21.245595574425934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4fb5c0b087%3A0xb7aabd8a90da0679!2sMota%20Varachha%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1690017805909!5m2!1sen!2sin" width="70%" height="45%" title='map' className='map_border mx-auto d-block'></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29749.225774882685!2d72.84343101893258!3d21.245595574425934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4fb5c0b087%3A0xb7aabd8a90da0679!2sMota%20Varachha%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1690017805909!5m2!1sen!2sin" width="70%" height="45%" title='map' className='map_border mx-auto d-block'></iframe>
                   </div>
                 </div>
               </div>
@@ -284,6 +302,7 @@ const settings = {
                               starRatedColor="gold"
                               changeRating={handleRatingChange}
                               numberOfStars={5}
+                              starDimension="35px"
                               name="rating" className="rating_star" />
                           </div>
                           <div className=" mx-auto d-block">
@@ -408,15 +427,15 @@ const settings = {
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29749.225774882685!2d72.84343101893258!3d21.245595574425934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4fb5c0b087%3A0xb7aabd8a90da0679!2sMota%20Varachha%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1690017805909!5m2!1sen!2sin" title='map' className='mx-auto d-block map_border1'></iframe>
             </div>
             <div className='mt-4 mb-4'>
-           <div className='d-flex justify-content-center align-items-center'>
-           <div className="d-flex align-items-center text-center">
-                    <img src={icon5} alt="Icon" className="icon-style"></img>
-                    <div className="text-content">
-                      <p className="mb-0 icon_p">T.nagar</p>
-                      <p className="mb-0">Chennai</p>
-                    </div>
+              <div className='d-flex justify-content-center align-items-center'>
+                <div className="d-flex align-items-center text-center">
+                  <img src={icon5} alt="Icon" className="icon-style"></img>
+                  <div className="text-content">
+                    <p className="mb-0 icon_p">T.nagar</p>
+                    <p className="mb-0">Chennai</p>
                   </div>
-           </div>
+                </div>
+              </div>
             </div>
 
             <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
@@ -487,15 +506,15 @@ const settings = {
       </section>
 
       <section className='container mt-5'>
-      <h2 className='Propertydetail_rec mb-4'>Recommended Property</h2>
-      <Slider {...settings}>
-        {allProduct.map((item) => (
-          <div key={item.id} className='p-2'>
-            <ProductCard items={item} />
-          </div>
-        ))}
-      </Slider>
-    </section>
+        <h2 className='Propertydetail_rec mb-4'>Recommended Property</h2>
+        <Slider {...settings}>
+          {allProduct.map((item) => (
+            <div key={item.id} className='p-2'>
+              <ProductCard items={item} />
+            </div>
+          ))}
+        </Slider>
+      </section>
 
 
       <section className='container home_box mt-5'>
@@ -518,6 +537,7 @@ const settings = {
       </section>
 
       <hr />
+
     </div>
   )
 }

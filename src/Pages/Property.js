@@ -239,7 +239,7 @@ export default function Property() {
                                 <p>0</p>
                                 <p>1,000,000 +</p>
                             </div>
-                            <RangeSlider />
+                            <RangeSlider min="0" max="100"/>
                         </div>
                         <hr></hr>
                         <div className='electronic'>
@@ -331,7 +331,7 @@ export default function Property() {
                             }
                         </div>
                         <div className='text-center'>
-                            <button className='model_btn'><img src='assets/img/loader.png' alt='' className='img-fluid pe-2' width="15%"></img>Load more</button>
+                            <button className='model_btnn'><img src='assets/img/loader.png' alt='' className='img-fluid pe-2' width="15%"></img>Load more</button>
                         </div>
                     </div>
                 </div>

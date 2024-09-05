@@ -12,11 +12,26 @@ export default function Header() {
    
     const [selectedLocation, setSelectedLocation] = useState('Chennai, Tamil Nadu');
     const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [loginModal, setloginModal] = useState(null);
+
+
   
     const handleSelectLocation = (location) => {
       setSelectedLocation(location);
       setDropdownOpen(false);
     };
+    
+    const [currentModal, setCurrentModal] = useState(null);
+
+    const openModal = (modalId) => {
+      setCurrentModal(modalId);
+    };
+  
+    const closeModal = () => {
+      setCurrentModal(null);
+    };
+    
+    
     return (
         <>
             <section className='container-fluid header_bg'>
@@ -68,7 +83,7 @@ export default function Header() {
                                                             </div>
                                                             </div>
                                                             <div className='mt-2'>
-                                                                <p className='model_p1 text-center'>Didn't have an account ? <span className='text-dark fw-bold' data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</span></p>
+                                                                <p className='model_p1 text-center'>Didn't have an account ? <span className='text-dark fw-bold' data-bs-toggle="modal" data-bs-target="#exampleModal" >Sign Up</span></p>
 
                                                                 <div className="modal fade" id="exampleModal" tabInd ex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
                                                                     <div className="modal-dialog modal-lg model_size">
@@ -178,7 +193,7 @@ export default function Header() {
                                    <div className='d-flex justify-content-between w-100'>
                                    <ul className="navbar-nav">
                                         <div className='nav-item dropdown'>
-                                            <Link className="dropbtn nav-link" to="/" >All Category</Link>
+                                            <Link className="dropbtn nav-link" to="/" >All Category<i className="ri-arrow-down-s-line ps-1 pt-5"></i></Link>
                                             <ul className="dropdown-menu dropdown-content border border-0" aria-labelledby="dropdownMenuLink">
                                                 <div className='row'>
                                                     <div className='col-lg-4 col-md-4 col-sm-6'>
