@@ -4,6 +4,7 @@ import Slider from "react-slick";
 export default function Carousel() {
   var settings = {
     dots: true,
+    
     infinite: false,
     autoplay:true,
     speed: 500,

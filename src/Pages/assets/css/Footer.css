@@ -2,7 +2,7 @@
     background: linear-gradient(to bottom, #095387, #035182,#0E6595,#1983BA); /* Background for button */
 }
 .footer_p{
-    font-family: Sarala;
+    /* font-family: Sarala; */
     font-size: 14.7px;
     font-weight: 700;
     line-height: 23.96px;
@@ -15,7 +15,7 @@
     margin-top: -30px;
 }
 .footer_h{
-    font-family: Sarala;
+    /* font-family: Sarala; */
     font-size: 23.02px;
     font-weight: 700;
     line-height: 7.53px;

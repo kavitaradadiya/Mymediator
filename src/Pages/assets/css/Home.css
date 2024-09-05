@@ -122,4 +122,14 @@ overflow-x: hidden;
 .customheight{
   min-height: 175px;
 }
+.slick-dots li button:before {
+  font-size: 12px; /* Adjust the size as needed */
+  color: #000; /* Change the color of the dots if necessary */
+}
+
+
+
+
+
+
    

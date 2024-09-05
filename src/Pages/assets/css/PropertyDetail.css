@@ -201,21 +201,16 @@
 }
 
 .icon-style {
-    width: 20px;
-    /* Adjust the icon size */
+    width: 30px;
     margin-right: 8px;
-    /* Space between icon and text */
 }
 
 .icon_p {
     font-size: 12px;
 }
-
-.text-content p {
-    margin: 0;
-    line-height: 1.2;
+.map_border1{
+    height: 200px;
 }
-
 /* --------------model-------------- */
 .model_size{
     width: 100%;
@@ -289,7 +284,7 @@
 
 .model-title1 {
     font-family: Poppins;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 37.3px;
     /* text-align: center; */
@@ -301,7 +296,9 @@
     line-height: 37.3px;
     text-align: left;
 }
-
+.model_size1{
+    margin-top: 150px !important;
+}
 
 .feedback_btn {
     background-color: #fff;
@@ -324,7 +321,6 @@ padding: 10px 60px;
 border-radius: 25px;
 border: none;
 }
-/* ----------comment_model------------- */
 
 @media(max-width:768px){
     .propertydetail_box{

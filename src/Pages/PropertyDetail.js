@@ -224,8 +224,8 @@ const settings = {
                 {/* --------------Enquiry-model---------------- */}
 
                 <div className="modal fade" id="enquiryModal" tabIndex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
-                  <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content model_size">
+                  <div className="modal-dialog modal-dialog-centered modal-lg model_size">
+                    <div className="modal-content">
                       <div className="modal-header mx-auto d-block">
                         <h5 className="modal-title pt-4" id="enquiryModalLabel">Enquiry Now</h5>
                       </div>
@@ -273,7 +273,7 @@ const settings = {
                 {/* ---------------feedback-model------------------- */}
 
                 <div className="modal fade" id="hitesh" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                  <div className="modal-dialog">
+                  <div className="modal-dialog model_size1">
                     <div className="modal-content model_bg">
                       <div className="modal-body">
                         <h5 className="modal-title mx-auto d-block model-title1 mb-2" id="staticBackdropLabel">Share your Feedback</h5>
@@ -338,43 +338,43 @@ const settings = {
             <div className='container propertydetail_box '>
               <div className='row pt-4'>
                 <div className='col-lg-4 col-md-4 col-sm-4 text-center'>
-                  <p><img src={icon1} alt='' className='img-fluid' width="20%"></img>990 Sq . Ft</p>
+                  <p><img src={icon1} alt='' className='img-fluid pe-2' width="20%"></img>990 Sq . Ft</p>
                 </div>
                 <div className='col-lg-4 col-md-4 col-sm-4 text-center'>
-                  <p><img src={icon2} alt='' className='img-fluid' width="20%"></img>North Facing</p>
+                  <p><img src={icon2} alt='' className='img-fluid pe-2' width="20%"></img>North Facing</p>
                 </div>
                 <div className='col-lg-4 col-md-4 col-sm-4 text-center'>
-                  <p><img src={icon3} alt='' className='img-fluid' width="20%"></img>3 BHK</p>
+                  <p><img src={icon3} alt='' className='img-fluid pe-2' width="20%"></img>3 BHK</p>
                 </div>
               </div>
 
               <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
 
               <div className='row pt-3'>
-                <div className='col-lg-4 col-md-4 col-sm-4 '>
+                <div className='col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center align-items-center '>
                   <div className="d-flex align-items-center text-center icon_mt">
-                    <img src={icon4} alt="Icon" className="icon-style" width="50%"></img>
+                    <img src={icon4} alt="Icon" className="icon-style"></img>
                     <div className="text-content">
                       <p className="mb-0 icon_p">Owner</p>
-                      <p className="mb-0 fw-bold">1st</p>
+                      <p className="mb-0">1st</p>
                     </div>
                   </div>
                 </div>
-                <div className='col-lg-4 col-md-4 col-sm-4 text-center icon_mt'>
+                <div className='col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center align-items-center  icon_mt'>
                   <div className="d-flex align-items-center text-center">
                     <img src={icon5} alt="Icon" className="icon-style"></img>
                     <div className="text-content">
                       <p className="mb-0 icon_p">T.nagar</p>
-                      <p className="mb-0 fw-bold">Chennai</p>
+                      <p className="mb-0">Chennai</p>
                     </div>
                   </div>
                 </div>
-                <div className='col-lg-4 col-md-4 col-sm-4 text-center icon_mt'>
-                  <div className="d-flex align-items-center text-center">
+                <div className='col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center align-items-center  icon_mt'>
+                  <div className="d-flex align-items-center">
                     <img src={icon6} alt="Icon" className="icon-style"></img>
                     <div className="text-content">
                       <p className="mb-0 icon_p">Posting Date</p>
-                      <p className="mb-0 fw-bold">05-Jun-24</p>
+                      <p className="mb-0">05-Jun-24</p>
                     </div>
                   </div>
                 </div>
@@ -390,7 +390,7 @@ const settings = {
           <div className='col-lg-5 col-md-5 col-sm-5 propertydetail_box_set'>
             <div className=' row Property_box2 mt-2 me-2 ms-2'>
               <div className='col-lg-4 col-md-4 col-sm-4'>
-                <img src={Ellipse} alt='' className='img-fluid profile_img_set' width="80%"></img>
+                <img src={Ellipse} alt='' className='img-fluid profile_img_set' width="60%"></img>
               </div>
               <div className='col-lg-6 col-md-6 col-sm-6'>
                 <div className='property_profile mt-2'>
@@ -406,13 +406,17 @@ const settings = {
             <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
             <div className='mt-5'>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29749.225774882685!2d72.84343101893258!3d21.245595574425934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4fb5c0b087%3A0xb7aabd8a90da0679!2sMota%20Varachha%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1690017805909!5m2!1sen!2sin" title='map' className='mx-auto d-block map_border1'></iframe>
-
-
-
-
             </div>
-            <div className='mt-3 mb-4'>
-              <p className='m-0 p-0 text-center'><img src={icon5} alt='' className='img-fluid pe-2' width="10%"></img>T.Nagar<br></br>Chennai</p>
+            <div className='mt-4 mb-4'>
+           <div className='d-flex justify-content-center align-items-center'>
+           <div className="d-flex align-items-center text-center">
+                    <img src={icon5} alt="Icon" className="icon-style"></img>
+                    <div className="text-content">
+                      <p className="mb-0 icon_p">T.nagar</p>
+                      <p className="mb-0">Chennai</p>
+                    </div>
+                  </div>
+           </div>
             </div>
 
             <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
@@ -482,8 +486,8 @@ const settings = {
         </div>
       </section>
 
-      <section className='container'>
-      <h2 className='Propertydetail_rec'>Recommended Property</h2>
+      <section className='container mt-5'>
+      <h2 className='Propertydetail_rec mb-4'>Recommended Property</h2>
       <Slider {...settings}>
         {allProduct.map((item) => (
           <div key={item.id} className='p-2'>

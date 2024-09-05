@@ -28,6 +28,7 @@ import product_25_image_01 from "../Fakedata/images/Frame25.png";
 import product_26_image_01 from "../Fakedata/images/Frame26.png";
 import product_27_image_01 from "../Fakedata/images/Frame27.png";
 import product_28_image_01 from "../Fakedata/images/Frame28.png";
+import '../../img/sq.fit.png'
 
 
 
@@ -52,7 +53,7 @@ const products = [
      image02: product_02_image_01,
      image03: product_02_image_01,
      location:"West Mambalam, ",
-     detail :"# 800 Sq . Ft",
+     detail :"800 Sq . Ft",
      category :"Property"
     },
     {

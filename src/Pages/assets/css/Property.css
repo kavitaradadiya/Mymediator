@@ -23,7 +23,7 @@
     /* height: 500px; */
 }
 .electronic .collapse {
-    max-height: 200px; 
+    max-height: 150px; 
     overflow-y: auto; 
 }
 
@@ -32,7 +32,7 @@
 }
 
 .electronic h5 {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     cursor: pointer;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .electronic h4 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     font-family: Poppins;
     margin-bottom: 20px;
@@ -50,7 +50,7 @@
 
 }
 .electronic h5{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin-left: 10px;
     /* margin-bottom: 20px; */
@@ -63,14 +63,14 @@
     Line-height:26px;
 }
 .check_label{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
 }
 .property_btn{
     border: 1px solid #B9B9B9;
     border-radius: 14px;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 35.42px;
     text-align: left;
