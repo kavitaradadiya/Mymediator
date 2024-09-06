@@ -81,6 +81,7 @@
   top: 8px;
   padding: 1px 4px;
   color: #18A60B;
+  background-color: #18A60B;
 }
 
 .header_btn2 {
@@ -124,20 +125,15 @@
 .model_btn {
   background-color: #02487C;
   color: #fff;
-  border-radius: 36.35px;
-  font-size: 20px;
+  border-radius: 25px;
+  font-size: 17px;
   font-weight: 600;
-  padding: 10px 100px;
+  padding: 13px 100px;
   border: none;
-  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  justify-content: center;
-  /* Center text horizontally */
-  align-items: center;
-  /* Center text vertically */
-  text-align: center;
+ 
 }
 
 .title_model {
@@ -177,7 +173,7 @@
   font-weight: 500;
 }
 
-.model_btn3 {
+ .model_btn3{
   border-radius: 50%;
   padding: 20px 7px;
   margin-right: 12px;
@@ -415,6 +411,33 @@ ul {
 
 }
 
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-body {
+  position: relative;
+}
+
+
 
 
 @media(max-width:1024px) {
@@ -460,6 +483,7 @@ ul {
   .nav-link {
     padding: 5px 25px !important;
   }
+  
 }
 
 @media(max-width:992px) {
@@ -481,6 +505,10 @@ ul {
     top: 65%;
     left: 30px !important;
   }
+  .model_size{
+    width: 80% !important;
+  }
+  
 }
 
 @media(max-width:768px) {
@@ -490,14 +518,25 @@ ul {
     top: 7px;
     padding: 1px 4px;
   }
-
   .header_btn5 {
     padding: 5px 30px !important;
   }
-
   .custom-input {
     width: 75% !important;
   }
+  .model_btn {
+    padding: 5px 70px !important;
+  }
+  .model_btn3{
+    padding: 15px 3px !important;
+    font-size: 14px !important;
+
+  }
+  .model_btn4{
+    padding: 15px 3px !important;
+    font-size: 14px !important;
+  }
+  
 }
 
 @media (max-width: 576px) {
@@ -564,7 +603,7 @@ ul {
   }
 
   .custom-input {
-    width: 89% !important;
+    width: 83% !important;
   }
 
   .header_btn4 {

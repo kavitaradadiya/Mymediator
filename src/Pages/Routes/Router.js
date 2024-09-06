@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from '../Home'
 import Property from '../Property'
 import PropertyDetail from '../PropertyDetail'
+import Selling from '../Selling'
 
 export default function Router() {
   return (
@@ -11,6 +12,7 @@ export default function Router() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/property' element={<Property></Property>}></Route>
         <Route path='/propertydetail/:id' element={<PropertyDetail></PropertyDetail>}></Route>
+        <Route path='/selling' element={<Selling></Selling>}></Route>
       </Routes>
     </div>
   )

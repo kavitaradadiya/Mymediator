@@ -323,7 +323,7 @@ export default function Property() {
                             {
                                 filteredProduct.map((item) => {
                                     return (
-                                        <div className='col-lg-4 col-md-6 col-sm-6 col-6 mb-4' key={item.id}>
+                                        <div className='col-lg-4 col-md-6 col-sm-12 col-12 mb-4' key={item.id}>
                                             <ProductCard items={item}></ProductCard>
                                         </div>
                                     )

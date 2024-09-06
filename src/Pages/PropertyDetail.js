@@ -24,13 +24,25 @@ import logo4 from '../img/logo4.png'
 import vector from '../img/Vector.png'
 import StarRatings from 'react-star-ratings';
 import group4 from "../img/group4.png"
-import Slider from 'react-slick';
+import Slider from "react-slick";
 
 
 
 export default function PropertyDetail() {
 
   // ------------slider---------
+  var settings1 = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    appendDots: dots => (
+      <ul className="custom-dots"> {dots} </ul>  // Apply custom class here
+    )
+  };
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -48,7 +60,7 @@ export default function PropertyDetail() {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -116,7 +128,7 @@ export default function PropertyDetail() {
   const Product = products.find(item => item.id === id)
   console.log(Product)
 
-  const { title, price, category, location, image01, image02, image03} = Product;
+  const { title, price, category, location, image01,} = Product;
 
   const [preImage, setPreImage] = useState(image01);
 
@@ -169,27 +181,17 @@ export default function PropertyDetail() {
                 </div>
               </div>
               <div className='col-lg-8 col-md-8 col-sm-8 col-8 mt-1'>
-                <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img className="d-block w-100" src={image01} alt="First slide" height="250px" />
-                    </div>
-                    <div className="carousel-item">
-                      <img className="d-block w-100" src={image01} alt="Second slide" height="250px"  />
-                    </div>
-                    <div className="carousel-item">
-                      <img className="d-block w-100" src={image01} alt="Third slide" height="250px"  />
-                    </div>
+                <Slider {...settings1}>
+                  <div>
+                    <img src={image01} className='img-fluid property_slider_img' alt=''></img>
                   </div>
-                  <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                  </a>
-                  <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                  </a>
-                </div>
+                  <div>
+                    <img src={image01} className='img-fluid property_slider_img' alt=''></img>
+                  </div>
+                  <div>
+                    <img src={image01} className='img-fluid property_slider_img' alt=''></img>
+                  </div>
+                </Slider>
               </div>
               <div className='Property_detail mt-4'>
                 <h2>{title}  <img src={group4} alt='' width="35%" className='ms-2'></img></h2>
@@ -247,7 +249,7 @@ export default function PropertyDetail() {
                       <div className="modal-header mx-auto d-block">
                         <h5 className="modal-title pt-4" id="enquiryModalLabel">Enquiry Now</h5>
                       </div>
-                      <div className="modal-body">
+                      <div className="modal-body p-0">
                         <div className="container text-left">
                           <div className="row justify-content-center">
                             <div className="col-lg-12">
@@ -335,7 +337,7 @@ export default function PropertyDetail() {
                             />
                           </div>
                           <div className="text-center mt-4">
-                            <button type="submit" className="comment_btn" data-bs-dismiss="modal" data-bs-target="#staticBackdrop">Submit</button>
+                            <button type="submit" className="comment_btn" data-bs-dismiss="modal" aria-label="Close" >Submit</button>
                           </div>
                         </form>
                       </div>
@@ -449,7 +451,7 @@ export default function PropertyDetail() {
       </section>
 
       <section className='container mb-3'>
-        <div className='row propertydetail_box1 p-4'>
+        <div className='row propertydetail_box1 py-3'>
           <div className='col-lg-4 col-md-4 col-sm-4 col-12'>
             <div className='row'>
               <div className='col-lg-6 col-md-6 col-sm-6 col-6 dec_type'>
@@ -468,7 +470,7 @@ export default function PropertyDetail() {
               </div>
             </div>
           </div>
-          <div className='col-lg-5 col-md-4 col-sm-4 col-12'>
+          <div className='col-lg-5 col-md-4 col-sm-6 col-12'>
             <div className='row'>
               <div className='col-lg-6 col-md-6 col-sm-6 col-6 dec_type'>
                 <p>Facing</p>
@@ -486,7 +488,7 @@ export default function PropertyDetail() {
               </div>
             </div>
           </div>
-          <div className='col-lg-3 col-md-4 col-sm-4 col-12'>
+          <div className='col-lg-3 col-md-4 col-sm-6 col-12'>
             <div className='row'>
               <div className='col-lg-7 col-md-6 col-sm-6 col-6 dec_type'>
                 <p>Total Floors</p>

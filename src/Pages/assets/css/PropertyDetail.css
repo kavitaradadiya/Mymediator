@@ -1,5 +1,5 @@
-.Property_img {
-    height: 250px;
+.property_slider_img{
+    height: 230px;
 }
 
 .Property_detail h2 {
@@ -184,14 +184,14 @@
 
 .dec_type p {
     font-family: Poppins;
-    font-size: 15.7px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 24.79px;
 }
 
 .dec_det p {
     font-family: Poppins;
-    font-size: 15.7px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 24.79px;
 }
@@ -212,8 +212,8 @@
     height: 200px;
 }
 /* --------------model-------------- */
-.model_size{
-    width: 100%;
+.Property_model_size{
+    width: 80%;
 }
 
 .modal-content {
@@ -224,16 +224,13 @@
 .modal-header {
     border-bottom: none;
 }
-
 .modal-body {
     padding: 2rem;
 }
-
 .form-control {
     border-radius: 10px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
 .btn-primary {
     background-color: #003366;
     /* Customize the button color */
@@ -321,7 +318,11 @@ padding: 10px 60px;
 border-radius: 25px;
 border: none;
 }
-
+@media(max-width:1024px){
+    .property_slider_img{
+        height: 200px !important;
+    }
+}
 
 @media(max-width:768px){
     .propertydetail_box{
@@ -336,6 +337,9 @@ border: none;
     }
     .map_border1{
         width: 200px;
+    }
+    .property_slider_img{
+        height: 148px !important;
     }
 }
 
@@ -365,28 +369,21 @@ border: none;
         margin-right: auto;
         display: block;
     }
-
     .d-flex {
         flex-direction: column;
-        /* Stack items on small screens */
         align-items: center;
-        /* Center items */
     }
-
+    
     .icon-style {
         margin-right: 0;
         margin-bottom: 4px;
-        /* Add space between icon and text */
     }
-
     .icon_mt {
         margin-bottom: 20px !important;
     }
-    
     .model-title1 {
         font-size: 18px;
     }
-    
     .feedback_btn {
         border-radius: 25px;
         padding: 10px 35px;
@@ -395,6 +392,12 @@ border: none;
     .rating {
         font-size: 1rem; /* Further reduce size for very small screens */
       }
+      .Property_box4{
+        height: 230px !important;
+    }
+    .property_slider_img{
+        height: 175px !important;
+    }
     
 }
 
@@ -427,14 +430,16 @@ border: none;
         height: 1145px !important;
     }
     .propertydetail_box_set{
-        height: 710px !important;
+        height: 748px !important;
         margin-top: 10px;
     }
     .Property_box4{
-        height: 410px !important;
-        width: 250px !important;
+        height: 450px !important;
+        width: 369px !important;
     }
-
+    .property_slider_img{
+        height: 175px !important;
+    }
 }
 
 @media(max-width:370px) {
@@ -492,9 +497,12 @@ border: none;
         margin-top: 10px;
     }
     .Property_box4{
-        height: 410px !important;
+        height: 425px !important;
+        width: 294px !important;
+    }
+    .property_slider_img{
+        height: 129px !important;
     }
     
-
 
 }

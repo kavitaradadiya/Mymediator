@@ -1,5 +1,8 @@
 import React from 'react'
 import logo2 from '../img/logo2.png'
+import '../Pages/assets/css/Footer.css'
+
+
 
 export default function Footer() {
   return (
