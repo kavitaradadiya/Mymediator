@@ -51,17 +51,17 @@ export default function Header() {
     return (
         <>
             <section className='container-fluid header_bg'>
-                <div className='row'>
-                    <div className='col-lg-2 col-md-0 col-sm-0'>
+                <div className='row'> 
+                    <div className='col-lg-2 col-md-0 col-sm-0 d-lg-block d-md-none d-sm-none d-none'>
                         <div>
-                            {/* <img src='assets/img/logo.png' alt='' className='img-fluid'></img> */}
+                        <Link to='/'> <img src={logo} alt='' className='img-fluid header_img' width="10%"></img></Link>
                         </div>
                     </div>
-                    <div className='col-lg-10 col-md-12 col-sm-12 pt-2'>
+                    <div className='col-lg-10 col-md-12 col-sm-12 pt-1'>
                         <div className='container-fluid'>
                             <div className='row'>
                                 <div className='col-lg-3 col-md-3 col-sm-4'>
-                                    <div className="input-group mb-3 custom-input-group mt-1">
+                                    <div className="input-group mb-3 custom-input-group pt-2">
                                         <div className="input-group-prepend ">
                                             <i className="ri-search-line input-group-text custom-icon"></i>
                                         </div>
@@ -175,10 +175,10 @@ export default function Header() {
                                                         </div>
                                                         <div className='mb-4 text-center'>
                                                             <div className='row'>
-                                                                <div className='col-lg-3 col-md-3 col-sm-3 col-3'><input type='text' className='model_btn3' size="1" placeholder='2'></input></div>
-                                                                <div className='col-lg-3 col-md-3 col-sm-3 col-3'> <input type='text' className='model_btn4' size="1" ></input> </div>
-                                                                <div className='col-lg-3 col-md-3 col-sm-3 col-3'> <input type='text' className='model_btn4' size="1" ></input> </div>
-                                                                <div className='col-lg-3 col-md-3 col-sm-3 col-3'> <input type='text' className='model_btn4' size="1" ></input> </div>
+                                                                <div className='col-lg-3 col-md-3 col-sm-3 col-3'><input type='text' className='model_btn3' size="1" placeholder='2'  maxLength="1"></input></div>
+                                                                <div className='col-lg-3 col-md-3 col-sm-3 col-3'> <input type='text' className='model_btn4' size="1" placeholder='2' maxLength="1"></input> </div>
+                                                                <div className='col-lg-3 col-md-3 col-sm-3 col-3'> <input type='text' className='model_btn4' size="1" placeholder='2' maxLength="1"></input> </div>
+                                                                <div className='col-lg-3 col-md-3 col-sm-3 col-3'> <input type='text' className='model_btn4' size="1"placeholder='2'  maxLength="1"></input> </div>
                                                             </div>
                                                         </div>
                                                         <div className='mt-3'>
@@ -205,10 +205,10 @@ export default function Header() {
                                     </select>
                                 </div>
                                 <div className='col-lg-2 col-md-2 col-sm-3 mt-2'>
-                                    <button className='header_btn5'>Sell</button>
+                                    <button className='header_btn5'><Link to="/selling" className='text-decoration-none text-dark'>Sell</Link></button>
                                 </div>
                                 <div className='col-lg-2 col-md-1 col-sm-0 d-lg-block d-md-none d-sm-none d-none'>
-                                    <img src='assets/img/profile_pic.png' alt='' className='img-fluid ms-4' width="50px"></img>
+                                    <img src='assets/img/profile_pic.png' alt='' className='img-fluid ms-4 pt-1' width="50px"></img>
                                 </div>
                             </div>
                         </div>
@@ -216,10 +216,10 @@ export default function Header() {
                 </div>
             </section>
 
-            <section className='container'>
+            <section className='container py-2'>
                 <div className='row'>
-                    <div className='col-lg-1 col-md-1 d-lg-block d-md-none d-sm-none d-none'>
-                        <Link to='/'> <img src={logo} alt='' className='img-fluid position-absolute header_img' width="9%"></img></Link>
+                    <div className='col-lg-1 col-md-1 d-lg-block d-md-none d-sm-none d-none position-relative'>
+                        {/* <Link to='/'> <img src={logo} alt='' className='img-fluid position-absolute header_img' width="9%"></img></Link> */}
                     </div>
                     <div className='col-lg-8 col-md-0 col-sm-0 col-0 d-lg-block d-md-none d-sm-none d-none'>
                         <nav className="navbar navbar-expand-lg navbar-light">
@@ -231,8 +231,8 @@ export default function Header() {
                                                 <Link className="dropbtn nav-link" to="/" >All Category<i className="ri-arrow-down-s-line ps-1 pt-5"></i></Link>
                                                 <ul className="dropdown-menu dropdown-content border border-0" aria-labelledby="dropdownMenuLink">
                                                     <div className='row'>
-                                                        <div className='col-lg-4 col-md-4 col-sm-6'>
-                                                            <h6 style={{ fontSize: "14px", paddingTop: "10px", paddingLeft: "20px", fontWeight: "600" }}>Property</h6>
+                                                        <div className='col-lg-4 col-md-4 col-sm-6 ps-4'>
+                                                            <h6 style={{ fontSize: "16px", paddingTop: "10px", paddingLeft: "15px", fontWeight: "600" }}>Property</h6>
                                                             <div className='link-text'>
                                                                 <Link to="">For Sale: Houses & Apartments</Link>
                                                                 <Link to="">For Rent: Houses & Apartments</Link>
@@ -242,8 +242,8 @@ export default function Header() {
                                                                 <Link to="">PG & Guest Houses</Link>
                                                             </div>
                                                         </div>
-                                                        <div className='col-lg-3 col-md-3 col-sm-6'>
-                                                            <h6 style={{ fontSize: "15px", paddingTop: "10px", paddingLeft: "20px", fontWeight: "600" }}>Electronics</h6>
+                                                        <div className='col-lg-4 col-md-3 col-sm-6'>
+                                                            <h6 style={{ fontSize: "16px", paddingTop: "10px", paddingLeft: "15px", fontWeight: "600" }}>Electronics</h6>
                                                             <div className='link-text'>
                                                                 <Link to="">TVs, Video - Audio</Link>
                                                                 <Link to="">Kitchen & Other Appliances</Link>
@@ -257,8 +257,8 @@ export default function Header() {
                                                                 <Link to="">Washing Machines</Link>
                                                             </div>
                                                         </div>
-                                                        <div className='col-lg-3 col-md-3 col-sm-6'>
-                                                            <h6 style={{ fontSize: "15px", paddingTop: "10px", paddingLeft: "20px", fontWeight: "600" }}>Bike</h6>
+                                                        <div className='col-lg-2 col-md-3 col-sm-6 bike_p'>
+                                                            <h6 style={{ fontSize: "16px", paddingTop: "10px", paddingLeft: "15px", fontWeight: "600" }}>Bike</h6>
                                                             <div className='link-text'>
                                                                 <Link to="">  Motorcycles</Link>
                                                                 <Link to="">Scooters</Link>
@@ -267,7 +267,7 @@ export default function Header() {
                                                             </div>
                                                         </div>
                                                         <div className='col-lg-2 col-md-2 col-sm-6'>
-                                                            <h6 style={{ fontSize: "15px", paddingTop: "10px", paddingLeft: "20px", fontWeight: "600" }}>Car</h6>
+                                                            <h6 style={{ fontSize: "16px", paddingTop: "10px", paddingLeft: "15px", fontWeight: "600" }}>Car</h6>
                                                         </div>
                                                     </div>
                                                 </ul>
@@ -276,7 +276,7 @@ export default function Header() {
                                                 <Link className="nav-link text-dark" to="/property" >Property</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link text-dark" to="/selling" >Electronics</Link>
+                                                <Link className="nav-link text-dark" to="/propertylist" >Electronics</Link>
                                             </li>
                                             <li className="nav-item">
                                                 <Link className="nav-link text-dark" to="">Car</Link>
@@ -371,7 +371,7 @@ export default function Header() {
 
                         <div className="custom-dropdown">
                             <div className="dropdown-header" onClick={() => setDropdownOpen(!isDropdownOpen)}>
-                                <i classname="ri-search-line pe-2"></i>
+                            <i class="ri-map-pin-fill text-danger pe-2"></i>
                                 {selectedLocation}
                                 <span className={`arrow ${isDropdownOpen ? 'open' : ''}`}>&#9662;</span>
                             </div>
@@ -381,7 +381,7 @@ export default function Header() {
                                     <div className="dropdown-section">
                                         {/* <h4 className='dropdown_li'>Use Current Location</h4> */}
                                         <div className="dropdown-item dropdown_li" onClick={() => handleSelectLocation('Use Current Location')}>
-                                            <i classname="ri-focus-3-fill pe-2"></i>
+                                        <i class="ri-focus-3-fill pe-2"></i>
                                             Use Current Location
                                         </div>
                                     </div>
@@ -389,7 +389,7 @@ export default function Header() {
                                     <div className="dropdown-section">
                                         <h5>Recent Location</h5>
                                         <div className="dropdown-item dropdown_li" onClick={() => handleSelectLocation('Tamil Nadu')}>
-                                            <i classname="ri-map-pin-line pe-2"></i>
+                                        <i class="ri-map-pin-line pe-2"></i>
                                             Tamil Nadu
                                         </div>
                                     </div>
@@ -397,19 +397,19 @@ export default function Header() {
                                     <div className="dropdown-section">
                                         <h5>Popular Location</h5>
                                         <div className="dropdown-item dropdown_li" onClick={() => handleSelectLocation('Chennai, Tamil Nadu')}>
-                                            <i classname="ri-map-pin-line pe-2"></i>
+                                        <i class="ri-map-pin-line pe-2"></i>
                                             Chennai, Tamil Nadu
                                         </div>
                                         <div className="dropdown-item dropdown_li" onClick={() => handleSelectLocation('Ambattur')}>
-                                            <i classname="ri-map-pin-line pe-2"></i>
+                                        <i class="ri-map-pin-line pe-2"></i>
                                             Ambattur
                                         </div>
                                         <div className="dropdown-item dropdown_li" onClick={() => handleSelectLocation('Padi')}>
-                                            <i classname="ri-map-pin-line pe-2"></i>
+                                        <i class="ri-map-pin-line pe-2"></i>
                                             Padi
                                         </div>
                                         <div className="dropdown-item dropdown_li" onClick={() => handleSelectLocation('Central Station')}>
-                                            <i classname="ri-map-pin-line pe-2"></i>
+                                        <i class="ri-map-pin-line pe-2"></i>
                                             Central Station
                                         </div>
                                     </div>
@@ -419,7 +419,6 @@ export default function Header() {
                     </div>
                 </div>
             </section>
-
         </>
     )
 }

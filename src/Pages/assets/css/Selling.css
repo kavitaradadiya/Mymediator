@@ -2,6 +2,7 @@
     border: 1px solid #dcdcdc;
     background-color: #fff;
     border-radius: 10px;
+    margin-top: 15px;
 }
 
 .selling_box h3 {
@@ -11,13 +12,13 @@
     padding: 30px 0px;
 }
 
-.selling_box1 {
+/* .selling_box1 {
     border: 1px solid #dcdcdc;
     background-color: #012D49;
     border-radius: 10px;
     height: 150px;
     position: relative;
-}
+} */
 
 .rectangle_img {
     width: 100%;
@@ -29,19 +30,44 @@
 }
 .sell_btn{
     background-color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    font-size: 15px;
     color: #000;
     font-weight: 600;
-    padding: 8px  0px 8px 8px;
-    width: 80%;
+    padding: 10px  0px 10px 10px;
+    width: 100%;
     text-align: left !important;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
 }
+.sell_btn img {
+    margin-right: 10px; /* Optional: Add some spacing between text and image */
+  }
+  .card_click{
+    display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+ 
+  }
+  /* .house_img1{
+
+  }
+  .house_img2{
+    display: none;
+  }
+  .card_click:hover .house_img1{
+    display: none;
+  }
+  .card_click:hover .house_img2{
+    display: block;
+  } */
+
 @media(max-width:370px) {
-    .img_set{
+    /* .img_set{
         margin-left: auto;
         margin-right: auto;
         display: block;
-    }
+    } */
 }

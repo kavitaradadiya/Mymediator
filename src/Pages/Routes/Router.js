@@ -4,6 +4,7 @@ import Home from '../Home'
 import Property from '../Property'
 import PropertyDetail from '../PropertyDetail'
 import Selling from '../Selling'
+import PropertyList from '../PropertyList'
 
 export default function Router() {
   return (
@@ -13,6 +14,7 @@ export default function Router() {
         <Route path='/property' element={<Property></Property>}></Route>
         <Route path='/propertydetail/:id' element={<PropertyDetail></PropertyDetail>}></Route>
         <Route path='/selling' element={<Selling></Selling>}></Route>
+        <Route path='/propertylist' element={<PropertyList></PropertyList>}></Route>
       </Routes>
     </div>
   )

@@ -14,7 +14,7 @@ export default function ProductCard(props) {
           <p className='product_p'><i className="ri-map-pin-2-fill product_icon pe-1"></i>{location}</p>
           
             <div className='justify-content-between d-flex'>
-              <span className='p-0 m-0 product_detail pt-1'><img src={icon} alt='' width="20px"></img>{detail}</span><span className='pt-1 product_type'>{type}</span>
+              <span className='p-0 m-0 product_detail '><img src={icon} alt='' width="20px"></img>{detail}</span><span className='pt-1 product_type'>{type}</span>
               </div>
               <div className='justify-content-between d-flex'>
                 <p className='product_year'>{year}</p>

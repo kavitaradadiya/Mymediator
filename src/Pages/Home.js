@@ -9,7 +9,8 @@ export default function Home() {
     <div style={{backgroundColor:"#F6F6F6"}}>
      <Carousel></Carousel>
 
-     <section className='container mt-5 mb-3'>
+     <section className='container mb-3'>
+     <h2 className='Propertydetail_rec mb-4'>Fresh Recommendations</h2>
       <div className='row'>
         {
           products.map((item) => {
@@ -26,7 +27,7 @@ export default function Home() {
     <section className='container mb-4'>
         <div className='row'>
           <div className='text-center'>
-            <button className='model_btn'><img src='assets/img/loader.png' alt='' className='img-fluid pe-2' width="15%"></img>Load more</button>
+            <button className='model_btnn'><img src='assets/img/loader.png' alt='' className='img-fluid pe-2' width="15%"></img>Load more</button>
           </div>
         </div>
     </section>

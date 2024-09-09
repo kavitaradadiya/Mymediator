@@ -28,6 +28,7 @@ import Slider from "react-slick";
 
 
 
+
 export default function PropertyDetail() {
 
   // ------------slider---------
@@ -128,7 +129,7 @@ export default function PropertyDetail() {
   const Product = products.find(item => item.id === id)
   console.log(Product)
 
-  const { title, price, category, location, image01,} = Product;
+  const { title, price, category, location, image01, } = Product;
 
   const [preImage, setPreImage] = useState(image01);
 
@@ -244,7 +245,7 @@ export default function PropertyDetail() {
                 {/* --------------Enquiry-model---------------- */}
 
                 <div className="modal fade" id="enquiryModal" tabIndex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
-                  <div className="modal-dialog modal-dialog-centered modal-lg model_size">
+                  <div className="modal-dialog modal-dialog-centered modal-lg model_size2">
                     <div className="modal-content">
                       <div className="modal-header mx-auto d-block">
                         <h5 className="modal-title pt-4" id="enquiryModalLabel">Enquiry Now</h5>
@@ -318,32 +319,7 @@ export default function PropertyDetail() {
 
                 {/* ------------comment-model----------------- */}
 
-                <div className={`modal fade ${showCommentModal ? 'show' : ''}`} id="commentModal" tabIndex="-1" aria-labelledby="commentModalLabel" aria-hidden={!showCommentModal} style={{ display: showCommentModal ? 'block' : 'none' }}>
-                  <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content model_bg1">
-                      <div className="modal-header">
-                        <h5 className="modal-title mx-auto d-block model-title1 " id="commentModalLabel">Report Ads</h5>
-                      </div>
-                      <div className="modal-body">
-                        <h5 className='model-title2'>Enter Your Feedback </h5>
-                        <form onSubmit={handleCommentSubmit}>
-                          <div className="form-group">
-                            <textarea
-                              value={comment}
-                              onChange={(e) => setComment(e.target.value)}
-                              placeholder="Enter Your Feedback"
-                              rows="4"
-                              className="form-control"
-                            />
-                          </div>
-                          <div className="text-center mt-4">
-                            <button type="submit" className="comment_btn" data-bs-dismiss="modal" aria-label="Close" >Submit</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 <button className='propertydetail_btn'><img src={frame185} alt='' className='img-fluid pe-1' width="18%"></img>Call</button>
               </div>
             </div>
@@ -444,15 +420,41 @@ export default function PropertyDetail() {
 
             <div className='justify-content-between d-flex mt-3'>
               <p className='id_detail'>ADS ID :<span>148562548</span> </p>
-              <p className='ad_detail'>REPORT AD</p>
+              <p className='ad_detail' data-bs-toggle="modal" data-bs-target="#commentModal">REPORT AD</p>
             </div>
+          {/* --------------------comment------------------------ */}
+            <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 className="modal-title mx-auto d-block model-title1 " id="commentModalLabel">Report Ads</h5>
+                    </div>
+                      <div className="modal-body">
+                        <h5 className='model-title2'>Enter Your Feedback </h5>
+                        <form onSubmit={handleCommentSubmit}>
+                          <div className="form-group">
+                            <textarea
+                              value={comment}
+                              onChange={(e) => setComment(e.target.value)}
+                              placeholder="Enter Your Feedback"
+                              rows="4"
+                              className="form-control"/>
+                          </div>
+                          <div className="text-center mt-4">
+                            <button type="submit" className="comment_btn" data-bs-dismiss="modal" aria-label="Close" >Submit</button>
+                          </div>
+                        </form>
+                      </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </section>
 
       <section className='container mb-3'>
         <div className='row propertydetail_box1 py-3'>
-          <div className='col-lg-4 col-md-4 col-sm-4 col-12'>
+          <div className='col-lg-4 col-md-6 col-sm-4 col-12'>
             <div className='row'>
               <div className='col-lg-6 col-md-6 col-sm-6 col-6 dec_type'>
                 <p>Type</p>
@@ -470,16 +472,16 @@ export default function PropertyDetail() {
               </div>
             </div>
           </div>
-          <div className='col-lg-5 col-md-4 col-sm-6 col-12'>
+          <div className='col-lg-4 col-md-6 col-sm-6 col-12'>
             <div className='row'>
-              <div className='col-lg-6 col-md-6 col-sm-6 col-6 dec_type'>
+              <div className='col-lg-8 col-md-6 col-sm-6 col-6 dec_type'>
                 <p>Facing</p>
                 <p>Bathrooms</p>
                 <p>Maintainers Monthly Fees </p>
                 <p>Bachelors Allowed</p>
-                <p>Super Buildup Area   ( FT2 )</p>
+                <p>Super Buildup Area ( FT2 )</p>
               </div>
-              <div className='col-lg-6 col-md-6 col-sm-6 col-6 dec_det'>
+              <div className='col-lg-4 col-md-6 col-sm-6 col-6 dec_det'>
                 <p>: North facing</p>
                 <p>: 2</p>
                 <p>: Rs : 1,500</p>
@@ -488,7 +490,7 @@ export default function PropertyDetail() {
               </div>
             </div>
           </div>
-          <div className='col-lg-3 col-md-4 col-sm-6 col-12'>
+          <div className='col-lg-4 col-md-6 col-sm-6 col-12'>
             <div className='row'>
               <div className='col-lg-7 col-md-6 col-sm-6 col-6 dec_type'>
                 <p>Total Floors</p>
@@ -509,7 +511,7 @@ export default function PropertyDetail() {
 
       <section className='container mt-5'>
         <h2 className='Propertydetail_rec mb-4'>Recommended Property</h2>
-        <Slider {...settings}>
+        <Slider className='slider_icon'{...settings}>
           {allProduct.map((item) => (
             <div key={item.id} className='p-2'>
               <ProductCard items={item} />
@@ -517,7 +519,6 @@ export default function PropertyDetail() {
           ))}
         </Slider>
       </section>
-
 
       <section className='container home_box mt-5'>
         <div className='row'>

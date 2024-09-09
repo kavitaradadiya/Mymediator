@@ -3,8 +3,8 @@ import Carousel from './Slider/Carousel'
 import products from '../Components/Fakedata/product'
 import ProductCard from './Category/ProductCard'
 import CommonSection from '../Components/CommonSection';
-import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
+import ReactSlider from "react-slider";
 
 
 export default function Property() {
@@ -32,6 +32,8 @@ export default function Property() {
     const handleBedroomClick = (bedroom) => {
         setSelectedBedroom(bedroom);
     };
+
+    const [values, setValues] = useState([10, 90]);
 
     useEffect(() => {
         let FilterProduct = products.filter(item => item.category === "Property");
@@ -105,7 +107,7 @@ export default function Property() {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
+                        <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
                         <div className='electronic'>
                             <h4>Filter</h4>
                             <div className='justify-content-between d-flex'>
@@ -206,7 +208,7 @@ export default function Property() {
                             </button>
                         </div>
 
-                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
+                        <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
                         <div className='electronic'>
                             <div className='justify-content-between d-flex'>
                                 <h4>Furnishing</h4>
@@ -235,11 +237,20 @@ export default function Property() {
                         <div className='electronic'>
                             <h4>Price Per SQ.FT</h4>
                             <img src='assets/img/chart.png' alt='' className='img-fluid'></img>
-                            <div className='justify-content-between d-flex'>
-                                <p>0</p>
-                                <p>1,000,000 +</p>
+                            <div className="range-slider-container ">
+                                <div className='justify-content-between d-flex pb-4'>
+                                    <label> {values[0]}  </label><label>{values[1]}</label>
+                                </div>
+                                <ReactSlider
+                                    className="horizontal-slider"
+                                    thumbClassName="thumb"
+                                    trackClassName="track"
+                                    min={0}
+                                    max={1000000}
+                                    value={values}
+                                    onChange={(newValues) => setValues(newValues)}
+                                    withTracks={true} />
                             </div>
-                            <RangeSlider min="0" max="100"/>
                         </div>
                         <hr></hr>
                         <div className='electronic'>
@@ -247,24 +258,21 @@ export default function Property() {
                             <button className={`property_btn ${selectedOption === 1 ? 'selected' : ''}`} onClick={() => handleOptionClick(1)}> 1+ Bathrooms</button>
                             <button
                                 className={`property_btn mt-3 ${selectedOption === 2 ? 'selected' : ''}`}
-                                onClick={() => handleOptionClick(2)}
-                            >
+                                onClick={() => handleOptionClick(2)} >
                                 2+ Bathrooms
                             </button>
                             <button
                                 className={`property_btn mt-3 ${selectedOption === 3 ? 'selected' : ''}`}
-                                onClick={() => handleOptionClick(3)}
-                            >
+                                onClick={() => handleOptionClick(3)} >
                                 3+ Bathrooms
                             </button>
                             <button
                                 className={`property_btn mt-3 ${selectedOption === 4 ? 'selected' : ''}`}
-                                onClick={() => handleOptionClick(4)}
-                            >
+                                onClick={() => handleOptionClick(4)} >
                                 4+ Bathrooms
                             </button>
                         </div>
-                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
+                        <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
                         <div className='electronic'>
                             <h4>Construction Status</h4>
                             <div className="form-check">
@@ -286,7 +294,7 @@ export default function Property() {
                                 </label>
                             </div>
                         </div>
-                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
+                        <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
                         <div className='electronic'>
                             <h4>Listed By</h4>
                             <div className="form-check ">
@@ -308,14 +316,23 @@ export default function Property() {
                                 </label>
                             </div>
                         </div>
-                        <div style={{ width: '100%',height: '2px',backgroundColor: '#E1E1E1',  margin: '20px 0'}} />
+                        <div style={{ width: '100%', height: '2px', backgroundColor: '#E1E1E1', margin: '20px 0' }} />
                         <div className='electronic pb-3'>
                             <h4>Super Buildup Area</h4>
-                            <div className='justify-content-between d-flex'>
-                                <p>0</p>
-                                <p>1,000,000 +</p>
+                            <div className="range-slider-container ">
+                                <div className='justify-content-between d-flex pb-4'>
+                                    <label> {values[0]}  </label><label>{values[1]}</label>
+                                </div>
+                                <ReactSlider
+                                    className="horizontal-slider"
+                                    thumbClassName="thumb"
+                                    trackClassName="track"
+                                    min={0}
+                                    max={1000000}
+                                    value={values}
+                                    onChange={(newValues) => setValues(newValues)}
+                                    withTracks={true} />
                             </div>
-                            <RangeSlider />
                         </div>
                     </div>
                     <div className='col-lg-8 col-md-8 col-sm-6'>
